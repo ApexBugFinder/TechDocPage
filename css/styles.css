@@ -1,0 +1,13 @@
+:root{
+    --primaryColor: #BA2BD2;
+    --secondayColor: #707070;
+    --accent1Color: #4B304F;
+    --accent2Color: #E0DA62;
+    --folderColor: #57B3A1;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24pt;
+}
+
