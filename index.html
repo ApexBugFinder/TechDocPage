@@ -7,38 +7,242 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://use.typekit.net/owi5hbd.css">
         <link rel="stylesheet" href="css/styles.css" />
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     </head>
     <body>
         <div class="sideMenuContainer">
                 <div id="nav-bar" class="nav-bar">
                     <ul class="nav-list">
                         <li class="nav-li">NGRX: The Basics</li>
-                        <li class="nav-li"><a href="" class="nav-item">Introduction</a></li>
-                        <li class="nav-li"><a href="" class="nav-item">Redux Pattern</a></li>
-                        <li class="nav-li"><a href="" class="nav-item">Getting Started</a></li>
-                        <li class="nav-li"><a href="" class="nav-item">Store</a></li>
-                        <li class="nav-li"><a href="" class="nav-item">State</a></li>
-                        <li class="nav-li"><a href="" class="nav-item">Initialize State</a></li>
-                        <li class="nav-li"><a href="" class="nav-item">Feature State Management</a></li>
-                        <li class="nav-li"><a href="" class="nav-item">Strong Typing</a></li>
-                        <li class="nav-li"><a href="" class="nav-item">Creating Feature Selectors</a></li>
-                        <li class="nav-li"><a href="" class="nav-item">Actions</a></li>
-                        <li class="nav-li"><a href="" class="nav-item">Reducer</a></li>
-                        <li class="nav-li"><a href="" class="nav-item">Utilizing Feature Selectors</a></li>
-                        <li class="nav-li"><a href="" class="nav-item">Effects</a></li>
-                        <li class="nav-li"><a href="" class="nav-item">Dev Tools</a></li>
+                        <li class="nav-li"><a href="#introduction" class="nav-item">Introduction</a></li>
+                        <li class="nav-li"><a href="#reduxPattern" class="nav-item">Redux Pattern</a></li>
+                        <li class="nav-li"><a href="#gettingStarted" class="nav-item">Getting Started</a></li>
+                        <li class="nav-li"><a href="#state" class="nav-item">Store</a></li>
+                        <li class="nav-li"><a href="#initializeState" class="nav-item">State</a></li>
+                        <li class="nav-li"><a href="#featureStateManagement" class="nav-item">Initialize State</a></li>
+                        <li class="nav-li"><a href="#strongTyping" class="nav-item">Feature State Management</a></li>
+                        <li class="nav-li"><a href="#creatingSelectors" class="nav-item">Strong Typing</a></li>
+                        <li class="nav-li"><a href="#actions" class="nav-item">Creating Feature Selectors</a></li>
+                        <li class="nav-li"><a href="#dispatchingActions" class="nav-item">Actions</a></li>
+                        <li class="nav-li"><a href="#reducers" class="nav-item">Reducer</a></li>
+                        <li class="nav-li"><a href="#utilizingFeatureSelectors" class="nav-item">Utilizing Feature Selectors</a></li>
+                        <li class="nav-li"><a href="#effects" class="nav-item">Effects</a></li>
+                        <li class="nav-li"><a href="#devtools" class="nav-item">Dev Tools</a></li>
                         
                     </ul>
                 </div>
         </div>
         <div class="contentContainer">
                 <header class="header">
-                    <span class="maintitle">N  G  R  X</span>
-                    <span class="subTitle">The Basics</span>
+                    <div class="siteLogoContainer">
+                        <img src="./images/SVG/ngrx_logo.svg" alt="logo" class="siteLogo">
+                    </div>
+                    <div class="headertitle">
+                         <span class="maintitle">NG</span>
+                        <span class="maintitle2">RX</span>
+                    </div>
+                   
+                    
+                    <div class="subTitle">The Basics</div>
 
                 </header>
 
-                <main class="main" id="main-doc"></main>
+                <main class="main" id="main-doc">
+                    <section id="introduction" class="infoChapter">
+                        <div class="sectionContainer">
+                            <div class="chapterHeading">
+                                <h3>
+                                    Introduction
+                                </h3>
+                            </div>
+                            <div class="chapterContent">
+                                <h4>
+                                    What is NgRx?
+                                </h4>
+                                <p>NgRx is a framework for building reactive applications in Angular. Ngrx provides libraries for:</p>
+
+                                <ul class="chapterContent-ul">
+                                    <li class="chapterContent-li">
+                                        Managing global and local state.
+                                    </li>
+                                    <li class="chapterContent-li">Entity collection management</li>
+                                    <li class="chapterContent-li">Integration with the Angular router</li>
+                                    <li class="chapterContent-li">Developer tooling that enhances developer experience when building many different types of applications</li>
+                                    <li class="chapterContent-li">Isolation of side effects to promote a cleaner component architecture</li>
+                                </ul>
+
+                                <p>In this NgRx kick starter we will try to help you become acquainted with the basic operation of RgRx. We will focus on the
+                                    highlighted functionality listed above and the advantages of NgRx implementation. As your application's complexity
+                                    increasesyou will find the need for @ngrx/entity and @ngrx/router-store.</p>
+                                
+                                <h4>How is NgRx pronounced?</h4>
+                                <p>Don't worry it is simple, when you say it you just spell it out letter by letter... "N G R X"</p>
+
+                                <h4>What does NgRx mean?</h4>
+                                <p>Like stated above NgRx is a framework for building reactive applications in angular. This means some
+                                    very smart developers combined the Redux Pattern with Angular and created a host of libraries and tools to manage your
+                                    application's state.</p>
+
+                                <p>Information for this kickstarter was pieced together from: </p>
+                                <ul class="chapterContent-ul">
+                                    <li class="chapterContent-li">PluralSight's <a href="https://www.pluralsight.com/courses/angular-ngrx-getting-started" alt="link to pluralsight's Angular NgRx Getting Started course">Angular NgRx: Getting Started</a> by Deborah Kurata & Duncan Hunter</li>
+                                    <li class="chapterContent-li"><a href="https://ngrx.io">NgRx website</a></li>
+                                   
+                                </ul>
+
+                                <p>You can download the code for this project so that you may follow along <a href="https://github.com/ApexBugFinder/Angular-NgRx-GettingStarted">here</a></p>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="reduxPattern" class="infoChapter">
+                        <div class="sectionContainer">
+                            <div class="chapterHeading">
+                                <h3>
+                                    Redux Pattern
+                                </h3>
+                            </div>
+                            <div class="chapterContent">
+                               
+
+                            </div>
+                        </div>
+                    </section>
+                    <section id="gettingStarted" class="infoChapter">
+                        <div class="sectionContainer">
+                            <div class="chapterHeading">
+                                <h3>
+                                    Getting Started
+                                </h3>
+                            </div>
+                            <div class="chapterContent"></div>
+                        </div>
+                    </section>
+                    <section id="state" class="infoChapter">
+                        <div class="sectionContainer">
+                            <div class="chapterHeading">
+                                <h3>
+                                    State - Immutable Store
+                                </h3>
+                            </div>
+                            <div class="chapterContent"></div>
+                        </div>
+                    </section>
+                    <section id="initializeState" class="infoChapter">
+                        <div class="sectionContainer">
+                            <div class="chapterHeading">
+                                <h3>
+                                    Initialize State
+                                </h3>
+                            </div>
+                            <div class="chapterContent"></div>
+                        </div>
+                    </section>
+                    <section id="featureStateManagement" class="infoChapter">
+                        <div class="sectionContainer">
+                            <div class="chapterHeading">
+                                <h3>
+                                    Feature State Management
+                                </h3>
+                            </div>
+                            <div class="chapterContent"></div>
+                        </div>
+                    </section>
+                    <section id="strongTyping" class="infoChapter">
+                        <div class="sectionContainer">
+                            <div class="chapterHeading">
+                                <h3>
+                                    Strong Typing - Feature State Management
+                                </h3>
+                            </div>
+                            <div class="chapterContent"></div>
+                        </div>
+                    </section>
+                    <section id="creatingFeatureSelectors" class="infoChapter">
+                        <div class="sectionContainer">
+                            <div class="chapterHeading">
+                                <h3>
+                                    Creating Selectors
+                                </h3>
+                            </div>
+                            <div class="chapterContent"></div>
+                        </div>
+                    </section>
+                    <section id="actions" class="infoChapter">
+                        <div class="sectionContainer">
+                            <div class="chapterHeading">
+                                <h3>
+                                    Actions
+                                </h3>
+                            </div>
+                            <div class="chapterContent"></div>
+                        </div>
+                    </section>
+                    <section id="dispatchingActions" class="infoChapter">
+                        <div class="sectionContainer">
+                            <div class="chapterHeading">
+                                <h3>
+                                    Dispatching Actions
+                                </h3>
+                            </div>
+                            <div class="chapterContent"></div>
+                        </div>
+                    </section>
+                    <section id="reducers" class="infoChapter">
+                        <div class="sectionContainer">
+                            <div class="chapterHeading">
+                                <h3>
+                                    Reducers
+                                </h3>
+                            </div>
+                            <div class="chapterContent"></div>
+                        </div>
+                    </section>
+                    <section id="utilizingFeatureSelectors" class="infoChapter">
+                        <div class="sectionContainer">
+                           <div class="chapterHeading">
+                                <h3>
+                                    Utilizing Feature Selectors
+                                </h3>
+                            </div>
+                            <div class="chapterContent"></div>
+                        </div>
+                    </section>
+                    <section id="effects" class="infoChapter">
+                        <div class="sectionContainer">
+                            <div class="chapterHeading">
+                                <h3>
+                                    Effects
+                                </h3>
+                            </div>
+                            <div class="chapterContent"></div>
+                        </div>
+                    </section>
+                    <section id="devtools" class="infoChapter">
+                        <div class="sectionContainer">
+                            <div class="chapterHeading">
+                                <h3>
+                                    Dev Tools
+                                </h3>
+                            </div>
+                            <div class="chapterContent"></div>
+                        </div>
+                    </section>
+                    <section class="infoChapter">
+                        <div class="sectionContainer">
+                            <div class="chapterHeading">
+                                <h3>
+                                    Introduction
+                                </h3>
+                            </div>
+                            <div class="chapterContent"></div>
+                        </div>
+                    </section>
+
+
+
+
+                </main>
                 <footer class="footer"></footer>
         </div>
        
