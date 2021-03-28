@@ -1,6 +1,7 @@
 @import 'introduction-styles.css';
 @import 'reduxPattern-styles.css';
 @import './gettingStarted-styles.css';
+@import './immutableState-styles.css';
 
 :root{
     --primaryColor: #BA2BD2;
