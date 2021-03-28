@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://use.typekit.net/owi5hbd.css">
         
         <link rel="stylesheet" href="css/styles.css" />
-        <link rel="text/javascript" href="scripts/removeWhiteSpace.js"/>
+        
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     </head>
@@ -244,48 +244,50 @@
                                 <p>Import StoreModule into the project imports in your <span class="filename">app.module.ts</span> file :</p>
 
                                 <div class="codeBlock">
-                                    <!-- <div class="codeInputBlock"> -->
+                                   
                                     
-                                        <!-- <p><span class="importStyle">import</span> { <span class="moduleStyle">StoreModule</span> } <span class="importStyle"> <span class="importStyle">from</span> '<span class="fileStyle">@ngrx/store</span>'</span></p>  -->
+                                        
                                      
                                          <pre id="codeInputBlock" class="codeInputBlock">
 
                                         
-                                            <code>
+                                            <code id="coderBlock">
                                                 
-                                                p { color: red; }
-                                                body { background-color: #eee; }
-                                                   <span class="importStyle">import</span> { StoreModule } from '@ngrx/store';  
+                                               
+                                                   <p> <span class="importStyle">import</span> { <span class="moduleStyle">StoreModule</span> } from <span class="fileStyle">'@ngrx/store'</span>;  </p>
                                                 
                                                     
             
-                                                    <span class="decoratorStyle">@NgModule</span>({
-                                                        imports: [
-                                                                ...
-                                                                    StoreModule.forRoot({})
+                                                    <p><span class="decoratorStyle">@NgModule</span>({</p>
+                                                        <p>imports: [</p>
+                                                            <div class="codeIndent">
+                                                                <p>...</p> 
+                                                                <p><span class="moduleStyle">StoreModule</span>.<span class="decoratorStyle">forRoot</span>({}),</p> 
+                                                                
+                                                            </div>  
+                                                               
                                                         ]
-                                                    })
-                                                    imp
-                                                    imp
-                                                    imp
-                                                    imp
-                                                    imp
-                                                    imp
-                                                    imip
-                                                    imp
+                                                    <p>});</p>
+                                                   
+
+                                                    
 
                                             
                                             </code>
                                         </pre>
                                       
                                         
-                                    <!-- </div> -->
+                                    
                                     <div class="codefileInfo">
-                                        <span>app</span> > <span>state</span> > <span class="filename">app.state.ts</span>
-                                    </div>
+                                        <span class="folderStyle">app</span> > <span class="folderStyle">state</span> > <span class="filename">app.state.ts</span>
+                                    </div>  
+
+                                   
                                 
                                </div>
-                                
+                                <p>
+                                        Congratulations you have now added NgRx to your project.
+                                </p>
                             </div>
                         </div>
                     </section>
@@ -296,7 +298,30 @@
                                     State - Immutable Store
                                 </h3>
                             </div>
-                            <div class="chapterContent"></div>
+                            <div class="chapterContent">
+
+                                <p>Every angular application must manage its’ state. As your application grows so does the size of the state that the
+                                application has to manage. Larger state means more application to manage more information, more state to manage,
+                                more actions and reactions to state changes to track and test. Very powerful when all the pieces of application state is
+                                held in one place the store because it will help with reasoning about user interaction, debugging, performance and
+                                avoiding race conditions.</p>
+
+                                <p>The store is what we call an immutable store. Immutability is paramount to the integrity of the store. Immutability
+                                    insures the data is accurate across all components by insuring there is only one path to changing the store. For the
+                                    redux pattern to work you must follow the redux principals of immutability:</p>
+
+
+                                <ul class="chapterContent-ul">
+                                    <li class="chapterContent-li">If you need to change state of the store always replace the whole state object and not mutate part of it</li>
+                                    <li class="chapterContent-li">Only use actions to change the state of the store</li>
+                                    <li class="chapterContent-li">Data that never changes is easier to reason about, track, and test.</li>
+                                </ul>
+
+                                <p>What kind of information can I store in my State/Immutable Store?</p>
+
+                                
+
+                            </div>
                         </div>
                     </section>
                     <section id="initializeState" class="infoChapter">
@@ -414,6 +439,7 @@
 
                 </main>
                 <footer class="footer"></footer>
+               
         </div>
        
 <script>
