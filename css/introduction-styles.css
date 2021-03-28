@@ -1,0 +1,64 @@
+.ngrxEquationContainer {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr 3fr;
+    grid-template-rows: 100%;
+    grid-template-areas: "ngrx angular oper8or redux"
+}
+.ngrxDiv {
+    grid-area: ngrx;
+
+    
+
+}
+.equationContent {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-top: 0px;
+    
+}
+.equationContentContainer1 {
+    display: flex;
+    flex-direction: row;
+    vertical-align: top;
+    justify-self: flex-start;
+}
+.equationContentContainer2 {
+    display: flex;
+    flex-direction: row;
+}
+.ngrxEquationLogo {
+    width: 40px;
+    margin-left: 30px;
+    display: inline-block;
+    
+}
+.equationContent p {
+    display: inline-block;
+    vertical-align: center;
+    margin-top: 20px;
+    margin-left: 30px;
+    justify-self: baseline;
+}
+.equationContent .nextToLogo {
+    margin-left: 15px;
+}
+.equationContent .equationContentContainer2 ul {
+    margin-left: 100px;
+}
+.equationContent ul li{
+    list-style: none;
+}
+.angularDiv {
+    grid-area: angular;
+
+}
+.oper8orDiv {
+    grid-area: oper8or;
+    font-size: 40px;
+    margin: auto;
+}
+.reduxDiv {
+    grid-area: redux;
+}

@@ -6,7 +6,9 @@
         <meta name="description" content="Getting Started With NGRX" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://use.typekit.net/owi5hbd.css">
+        
         <link rel="stylesheet" href="css/styles.css" />
+        <link rel="text/javascript" href="scripts/removeWhiteSpace.js"/>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     </head>
@@ -57,6 +59,7 @@
                                 </h3>
                             </div>
                             <div class="chapterContent">
+                               
                                 <h4>
                                     What is NgRx?
                                 </h4>
@@ -83,7 +86,68 @@
                                 <p>Like stated above NgRx is a framework for building reactive applications in angular. This means some
                                     very smart developers combined the Redux Pattern with Angular and created a host of libraries and tools to manage your
                                     application's state.</p>
+                                
+                                <div class="ngrxEquationContainer">
+                                    <div class="ngrxDiv">
+                                        <div class="equationContent">
+                                            <div class="equationContentContainer1">
+                                                <img src="./images/SVG/ngrx_logo.svg" alt="" class="ngrxEquationLogo"> 
+                                            <p class="nextToLogo">NgRx</p>
+                                            <p>=</p>
+                                            </div>
+                                            
+                                        </div>
+                                       
+                                        
+                                    </div>
+                                    <div class="angularDiv">
+                                        <div class="equationContent">
+                                        
+                                        <div class="equationContentContainer1">
+                                           <img src="./images/SVG/angularLogo.svg" alt="" class="ngrxEquationLogo"> 
+                                            <p class="nextToLogo">Angular</p> 
+                                           
+                                        </div>
+                                        <div class="equationContentContainer2">
+                                            <ul>
+                                                <li>Component</li>
+                                                <li>View</li>
+                                                
+                                            </ul>
+                                        </div>
+                                        
+                                    </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="oper8orDiv">+</div>
 
+
+                                    <div class="reduxDiv">
+                                        <div class="equationContent">
+                                            <div class="equationContentContainer1">
+                                                <img src="./images/SVG/reduxLogo.svg" alt="" class="ngrxEquationLogo"> 
+                                                <p class="nextToLogo">Redux</p>
+                                            </div>
+                                            <div class="equationContentContainer2">
+                                                 <ul>
+                                                    <li>State / Store</li>
+                                                    <li>Reducers</li>
+                                                    <li>Actions</li>
+                                                    <li>Payloads</li>
+                                                    <li>Effects</li>
+                                                    
+                                                </ul>
+                                            </div>
+                                               
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+
+                                <h4>Where can we find more information?</h4>
                                 <p>Information for this kickstarter was pieced together from: </p>
                                 <ul class="chapterContent-ul">
                                     <li class="chapterContent-li">PluralSight's <a href="https://www.pluralsight.com/courses/angular-ngrx-getting-started" alt="link to pluralsight's Angular NgRx Getting Started course">Angular NgRx: Getting Started</a> by Deborah Kurata & Duncan Hunter</li>
@@ -92,6 +156,32 @@
                                 </ul>
 
                                 <p>You can download the code for this project so that you may follow along <a href="https://github.com/ApexBugFinder/Angular-NgRx-GettingStarted">here</a></p>
+                            
+                            
+                                <h4>What are the advantages of NgRx?</h4>
+                                <p class="quote">‘Redux is not great for making simple things quickly. It is great for making really hard things simple’</p>
+                                <p class="quoteAuthor">- Jani Evakallio</p>
+                            
+                                <p>NgRx simplifies a complex problem by standardizing the process of dealing with a shared state. A shared state grows in
+                                    complexity as the application grows as more components become dependent on the shared state and can effect the
+                                    shared state at any time. Implementing NgRx can:</p>
+
+                                    <ul class="chapterContent-ul">
+                                        <li class="chapterContent-li">Simplify code</li>
+                                        <li class="chapterContent-li">Easier to track changes</li>
+                                        <li class="chapterContent-li">Easier to debug and test</li>
+                                        <li class="chapterContent-li">Implement an angular change detection strategy in components - improve performance</li>
+                                        <li class="chapterContent-li">Testing Reducers are easier to test</li>
+                                        <li class="chapterContent-li">Tooling Advantages</li>
+                                        <ul class="chapterContent-ul2">
+                                            <li class="chapterContent-li">History of state changes</li>
+                                            <li class="chapterContent-li">Visualize state tree</li>
+                                            <li class="chapterContent-li">Debug by undoing and redoing state changes</li>
+                                            <li class="chapterContent-li">Advanced Logging</li>
+                                        </ul>
+                                        
+                                    </ul>
+                            
                             </div>
                         </div>
                     </section>
@@ -103,8 +193,27 @@
                                 </h3>
                             </div>
                             <div class="chapterContent">
-                               
+                               <p>The redux pattern is very handy for updating and tracking changes to a data store that
+                                multiple resources rely on for up-to-date information simultaneously. How does this pattern
+                                keep all components dependent on a single source synchronized to one data source?</p>
 
+                                <ul class="chapterContent-ul-numbered">
+                                    <li>It uses selectors to get the latest information that is stored in the store/state.</li>
+                                    <li>This information is gathered in the component and displayed in the view.</li>
+                                    <li>When the user interacts with view and changes the state of the application this information
+                                        and new state will be packaged into actions in the Component and sent to the reducers.</li>
+                                    <li>The reducers are listening for specific actions that carry payloads of new information about the
+                                        changes to the state</li>
+                                    <li>The reducers copy the existing data and augment it with the payload from the actions
+                                        carrying the new changes to state using a spread operator, creating the new state.</li>
+                                    <li>The new state is saved to the store</li>
+                                    <li>The selectors that have been listening for changes to the state, notify all the components
+                                        subscribed simultaneously of the new state.</li>
+                                </ul>
+
+                                <h3>IMAGE</h3>
+                                <p>The process happens over and over again. The store cannot be changed directly and all changes to the store
+                                    must follow this strict process in order to protect the integrity of the data.</p>
                             </div>
                         </div>
                     </section>
@@ -115,7 +224,69 @@
                                     Getting Started
                                 </h3>
                             </div>
-                            <div class="chapterContent"></div>
+                            <div class="chapterContent">
+                                <h4>Lets install NgRx:</h4>
+                                <p class="ngrxPreReqs">First install prerequisites: 
+                                    <a class="node" href="https://nodejs.org" target="#blank"><img class="logoSize" src="./images/SVG/node_logo.svg" alt="node logo"></a> 
+                                    <a class="npm" href="https://npmjs.com" target="#blank"><img class="logoSize" src="./images/SVG/npm-logo-red.svg" alt="node logo"></a>
+                                    <a class="angular" href="https://angular.io" target="#blank"><img class="logoSize" src="./images/SVG/angular.svg" alt="node logo"></a>
+                                </p>
+
+                                <p>then install the ngrx Store</p>
+                                <pre>
+                                   
+                                       
+                                           <kbd>npm install @ngrx/store --save</kbd> 
+                                        
+                                   
+                                </pre>
+                                
+                                <p>Import StoreModule into the project imports in your <span class="filename">app.module.ts</span> file :</p>
+
+                                <div class="codeBlock">
+                                    <!-- <div class="codeInputBlock"> -->
+                                    
+                                        <!-- <p><span class="importStyle">import</span> { <span class="moduleStyle">StoreModule</span> } <span class="importStyle"> <span class="importStyle">from</span> '<span class="fileStyle">@ngrx/store</span>'</span></p>  -->
+                                     
+                                         <pre id="codeInputBlock" class="codeInputBlock">
+
+                                        
+                                            <code>
+                                                
+                                                p { color: red; }
+                                                body { background-color: #eee; }
+                                                   <span class="importStyle">import</span> { StoreModule } from '@ngrx/store';  
+                                                
+                                                    
+            
+                                                    <span class="decoratorStyle">@NgModule</span>({
+                                                        imports: [
+                                                                ...
+                                                                    StoreModule.forRoot({})
+                                                        ]
+                                                    })
+                                                    imp
+                                                    imp
+                                                    imp
+                                                    imp
+                                                    imp
+                                                    imp
+                                                    imip
+                                                    imp
+
+                                            
+                                            </code>
+                                        </pre>
+                                      
+                                        
+                                    <!-- </div> -->
+                                    <div class="codefileInfo">
+                                        <span>app</span> > <span>state</span> > <span class="filename">app.state.ts</span>
+                                    </div>
+                                
+                               </div>
+                                
+                            </div>
                         </div>
                     </section>
                     <section id="state" class="infoChapter">
@@ -238,14 +409,15 @@
                             <div class="chapterContent"></div>
                         </div>
                     </section>
-
-
+                   
 
 
                 </main>
                 <footer class="footer"></footer>
         </div>
        
+<script>
 
+</script>
     </body>
 </html>
