@@ -1,5 +1,5 @@
 .ngrxPreReqs a{
-    margin-left: 20px;
+    margin-left: 8vw;
 
 }
 
@@ -9,7 +9,13 @@
 
 
 
-
+.terminalCode{
+    width: 80vm;
+    
+}
+.terminalCode pre{
+    margin: 40px auto;
+}
 
 .filename {
     
@@ -27,11 +33,11 @@
     "filename"
     ;
     justify-content: center;
-    margin-left: auto;
+    /* margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
-    margin-bottom: 0px;
-    
+    margin-bottom: 0px; */
+    margin: 40px auto;
                         
 }
 .codeInputBlock {
@@ -44,12 +50,13 @@
     font-size: 14px;
     background-color: black;
     align-items: center;
-    
+    margin-bottom: 0px;
     color: white;
 }
 .codeInputBlock p {
     font-family: sans-serif;
     font-size: 14px;
+    
 }
 
 .codefileInfo {
@@ -66,6 +73,8 @@ pre {
     width: 400px;
     background-color: #000;
     white-space: normal;
+    margin-bottom: 0px;
+    /* margin-top: 20px; */
 
 }
 pre code {
