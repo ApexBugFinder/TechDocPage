@@ -154,7 +154,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="oper8orDivEq"><p>=</p></div>
+                <div class="oper8orDivEq">=</div>
                 <div class="angularDiv">
                   <div class="equationContent">
                     <div class="equationContentContainer1">
@@ -311,7 +311,7 @@
                 </li>
               </ul>
             </div>
-              <h3>IMAGE</h3>
+              <img src="./videos/NGRX-reduxPatttern-slide4.gif" alt="" class="reduxGiff">
               <p>
                 The process happens over and over again. The store cannot be
                 changed directly and all changes to the store must follow this
@@ -371,7 +371,7 @@
                         <span class="filename">app.module.ts</span> file :
                       </p>
         
-                      <div class="codeBlock">
+                      <div class="codeBlock gettingStartedCodeBlock1">
                         <pre id="codeInputBlock" class="codeInputBlock">
         
                                                 
@@ -597,46 +597,66 @@
                 </div>
 
                 <div class="featureStateGrid1CodeBlock">
+                  
                   <div class="featureCodeUsersBlock">
+                    <p class="featureSliceTitle">Feature: User</p>
                     <div class="codeBlock">
-                      <pre id="codeInputBlock" class="codeInputBlock">
+                      <pre  class="codeInputBlock">
                                                
                                                    <code id="coderBlock">                                                   
-                                                      
-                                                           
+                                                      <p>{</p>
+                                                        <p class="propertyStyle">isAuthenticated: <span class="booleanStyle">true</span>,</p>
+                                                        <p class="propertyStyle">userId: <span class="fileStyle">`kdkdjggjj`</span>,</p>
+                                                        <p class="propertyStyle">userName: <span class="fileStyle">`BobbyBooShay3000`</span>,</p>
+                                                        <p class="propertyStyle">userProfilePic: <span class="fileStyle">`...redux-logo.png`</span>,</p>
+                                                        <p class="propertyStyle">loginExp: <span class="decoratorStyle">4444444</span></p>
+                                                       <p>}</p>    
 
                                                    
                                                    </code>
                                                </pre>
 
-                      <div class="codefileInfo">
-                        <span class="folderStyle">app</span> >
-                        <span class="folderStyle">state</span> >
-                        <span class="filename">app.state.ts</span>
-                      </div>
+                      <!-- <div class="codefileInfo">
+                        
+                      </div> -->
                     </div>
                   </div>
 
                   <div class="featureCodeProductsBlock">
+                    <p class="featureSliceTitle">Feature: Product</p>
                     <div class="codeBlock">
                       <pre
                         id="codeInputBlock"
                         class="codeInputBlock"
-                      >                                               
+                      >                                                
                                                    <code id="coderBlock">
                                                       
-                                                          <p><span class="importStyle">export</span> interface <span class="folderStyle">State</span> {</p>
-                                                            <br>
-                                                            <p>}</p>
+                                                    <ul class="featureSlice">
+                                                      <li>{</li>
+                                                      <li><p class="propertyStyle">showProductCode: <span class="booleanStyle">true</span>,</p></li>
+                                                      <li> <p class="propertyStyle">currentProduct: <span class="fileStyle">`kdkdjggjj`</span>,</p></li>
+                                                      <li><p class="propertyStyle">products: [</p></li>
+                                                          <ul class="featureSlice codeIndent">
+                                                            <li class="propertyStyle">{</li>
+                                                            <li><p class="propertyStyle ">productName: <span class="fileStyle">`Green Tea</span>,</p> </li>
+                                                            <li><p class="propertyStyle ">productCode: <span class="decoratorStyle">1</span>,</p></li>
+                                                            <li><p class="propertyStyle ">description: <span class="fileStyle">`Tasty and Green`</span>,</p></li>
+                                                            <li class="propertyStyle">}</li>
+                                                          </ul>
+                                                      
+                                                      <li class="propertyStyle">]</li>
+                                                      <li>}</li>
+                                                      <li></li>
+                                                    </ul>
+                                                    
+
       
                                                    </code>
                                                </pre>
 
-                      <div class="codefileInfo">
-                        <span class="folderStyle">app</span> >
-                        <span class="folderStyle">state</span> >
-                        <span class="filename">app.state.ts</span>
-                      </div>
+                      <!-- <div class="codefileInfo">
+                       
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -670,16 +690,30 @@
                     >                                               
                                                 <code id="coderBlock">
                                                    
-                                                       <p><span class="importStyle">export</span> interface <span class="folderStyle">State</span> {</p>
-                                                         <br>
-                                                         <p>}</p>
+                                                      
+                                                  <p> <span class="importStyle">import</span> { <span class="moduleStyle">StoreModule</span> } from <span class="fileStyle">'@ngrx/store'</span>;  </p>
+                                                  <p> <span class="importStyle">import</span> { <span class="moduleStyle">reducer</span> } from <span class="fileStyle">'./state/user.reducer'</span>;  </p>      
+                                                            
+                    
+                                                  <p><span class="decoratorStyle">@NgModule</span>({</p>
+                                                      <p>imports: [</p>
+                                                          <div class="codeIndent">
+                                                              <p>...</p> 
+                                                              <p><span class="moduleStyle">StoreModule</span>.<span class="decoratorStyle">forFeature</span>
+                                                                (<span class="fileStyle">'users'</span>, <span class="moduleStyle">reducer</span>),</p> 
+                                                              
+                                                          </div>  
+                                                             
+                                                      ]
+                                                  <p>});</p>
+                                                 
     
                                                 </code>
                                             </pre>
                     <div class="codefileInfo">
                       <span class="folderStyle">app</span> >
-                      <span class="folderStyle">state</span> >
-                      <span class="filename">app.state.ts</span>
+                      <span class="folderStyle">users</span> >
+                      <span class="filename">user.module.ts</span>
                     </div>
                   </div>
 
@@ -690,16 +724,33 @@
                     >                                               
                                                 <code id="coderBlock">
                                                    
-                                                       <p><span class="importStyle">export</span> interface <span class="folderStyle">State</span> {</p>
-                                                         <br>
-                                                         <p>}</p>
+                                                      
+                                                 
+                                                        
+                                                            
+                                                  <p> <span class="importStyle">import</span> { <span class="moduleStyle">StoreModule</span> } from <span class="fileStyle">'@ngrx/store'</span>;  </p>
+                                                  <p> <span class="importStyle">import</span> { <span class="moduleStyle">reducer</span> } from <span class="fileStyle">'./state/product.reducer'</span>;  </p>      
+                                                            
+                    
+                                                  <p><span class="decoratorStyle">@NgModule</span>({</p>
+                                                      <p>imports: [</p>
+                                                          <div class="codeIndent">
+                                                              <p>...</p> 
+                                                              <p><span class="moduleStyle">StoreModule</span>.<span class="decoratorStyle">forFeature</span>
+                                                                (<span class="fileStyle">'products'</span>, <span class="moduleStyle">reducer</span>),</p> 
+                                                              
+                                                          </div>  
+                                                             
+                                                      ]
+                                                  <p>});</p>
+                                                 
     
                                                 </code>
                                             </pre>
                     <div class="codefileInfo">
                       <span class="folderStyle">app</span> >
-                      <span class="folderStyle">state</span> >
-                      <span class="filename">app.state.ts</span>
+                      <span class="folderStyle">product</span> >
+                      <span class="filename">product.module.ts</span>
                     </div>
                   </div>
                 </div>
@@ -712,7 +763,7 @@
             <div class="chapterHeading">
               <h3>Strong Typing - Feature State Management</h3>
             </div>
-            <div class="chapterContent">
+            <div class="chapterContent">  
               <p>
                 One of the great advantages of working with Typescript is it's
                 ability to make your JavaScript Type safe. This adds an extra
@@ -726,28 +777,45 @@
                 data type
               </p>
 
-              <div class="stronglytypedCodeBlock1">
-                <pre
-                  id="codeInputBlock"
-                  class="codeInputBlock"
-                >                                               
-                                            <code id="coderBlock">
-                                               
-                                                   <p><span class="importStyle">export</span> interface <span class="folderStyle">State</span> {</p>
-                                                     <br>
-                                                     <p>}</p>
-
-                                            </code>
-                                        </pre>
-                <div class="codefileInfo">
-                  <span class="folderStyle">app</span> >
-                  <span class="folderStyle">state</span> >
-                  <span class="filename">app.state.ts</span>
+              <div class="stronglyTypedGrid1">
+                <div class="stronglyTypedGrid1Pic"><img src="./images/stronglyTypedPic1.png" alt="" class="" id="strongtypedPic1"></div>
+                <div class="stronglyTypedGrid1CodeBlock1">
+                  <pre
+                    id="codeInputBlock"
+                    class="codeInputBlock"
+                  >                                               
+                                              <code id="coderBlock">
+                                                 
+                                                     <p><span class="importStyle">export </span> <span class="interfaceStyle">interface</span>
+                                                      <span class="folderStyle">State</span> 
+                                                      <span class="importStyle">extends </span>
+                                                      <span class="folderStyle">fromRoot.State</span> {</p>
+                                                       <p></p> 
+                                                       
+                                                         <p><span class="moduleStyle codeIndent">products</span>:<span class="folderStyle">ProductState</span></p>
+                                                       
+                                                       <p>}</p>
+                                                       <br>
+                                                       <p><span class="importStyle"></span> <span class="interfaceStyle">interface</span><span class="folderStyle">ProductState</span> = {</p>
+                                                       <p><span class="moduleStyle codeIndent">showProductCode</span>: <span class="booleanStyle">boolean</span></p>
+                                                       <p><span class="moduleStyle codeIndent">currentProduct</span>: <span class="folderStyle">Product</span>;</p>
+                                                       <p><span class="moduleStyle codeIndent">products</span>: <span class="folderStyle">Product[]</span>;</p>
+                                                       <p><span class="moduleStyle codeIndent">error</span>:<span class="errorStyle">string</span>;</p>
+                                                       <p>{</p>
+                                              </code>
+                                          </pre>
+                  <div class="codefileInfo">
+                    <span class="folderStyle">app</span> >
+                    <span class="folderStyle">products</span> >
+                    <span class="folderStyle">state</span> >
+                    <span class="filename">product.reducer.ts</span>
+                  </div>
                 </div>
               </div>
+             
 
-              <h3>IMAGE</h3>
-              <img src="" alt="" class="" id="strongtypedPic1">
+              
+              
               <p>AppState operates similarly to lazy loading with the router. As you only load what state is critical for the app to function
                 and then state slice corresponding to the feature is added and loaded when the feature is loaded.</p>
             </div>
@@ -773,16 +841,28 @@
                         >                                               
                                                     <code id="coderBlock">
                                                        
-                                                           <p><span class="importStyle">export</span> interface <span class="folderStyle">State</span> {</p>
-                                                             <br>
-                                                             <p>}</p>
+                                                        <p><span class="interfaceStyle">const </span><span class="moduleStyle">getProductFeatureState =</span></p>
+                                                        <p><span class="decoratorStyle codeIndent">createFeatureSelector</span><span class="folderStyle"></span><span class="fileStyle"></span></p>
+                                                        <br>
+                                                        <p><span class="importStyle">export</span><span class="interfaceStyle">const</span><span class="moduleStyle">getIsUserAuthenticated</span><span class="decoratorStyle">createSelector</span> (</p>
+                                                        <p><span class="moduleStyle">getProductFeatureState</span>,</p>
+                                                        <p><span class="moduleStyle">state => state.isAuthenticated</span>);</p>
+                                                        <br>
+                                                        <p><span class="importStyle">export</span><span class="interfaceStyle">const</span><span class="moduleStyle">getCurrentUser</span><span class="decoratorStyle">createSelector</span> (</p>
+                                                        <p><span class="moduleStyle">getProductFeatureState</span>,</p>
+                                                        <p><span class="moduleStyle">state => state.currentUser</span>);</p>
+                                                        <br>
+                                                        <p><span class="importStyle">export</span><span class="interfaceStyle">const</span><span class="moduleStyle">getMaskUserName</span><span class="decoratorStyle">createSelector</span> (</p>
+                                                        <p><span class="moduleStyle">getProductFeatureState</span>,</p>
+                                                        <p><span class="moduleStyle">state => state.maskUserName</span>);</p>
         
                                                     </code>
                                                 </pre>
                         <div class="codefileInfo">
                           <span class="folderStyle">app</span> >
+                          <span class="folderStyle">user</span> >
                           <span class="folderStyle">state</span> >
-                          <span class="filename">app.state.ts</span>
+                          <span class="filename">user.reducer.ts</span>
                         </div>
                       
                     </div>

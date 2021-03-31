@@ -5,12 +5,14 @@
 @import './initializeState-styles.css';
 @import './featureStateManagement-styles.css';
 @import './strongTyping-styles.css';
+@import './creatingSelectors-styles.css';
 @import './actions-styles.css';
 @import './dispatchingActions-styles.css';
 @import './reducers-styles.css';
 @import './utilizingFeatureSelectors-styles.css';
 @import './effects-styles.css';
 @import './devtools-styles.css';
+
 
 
 :root{
@@ -258,12 +260,13 @@ li a, p a {
 }
 
 .chapterContent-ul2 {
+    margin-left: 0px;
     margin-bottom: 40px;
 }
 
  .chapterContent-ul2 li{
     list-style-image: url('../images/SVG/bullet-li3.svg');
-    margin-left: 30px;
+    margin-left: 0px;
 }
 
  .chapterContent-ul-numbered {
@@ -277,4 +280,31 @@ li a, p a {
 .terminalCode pre{
     margin: 40px auto;
 }
+.interfaceStyle {
+    color: #00008B;
+}
+.importStyle {
+    color: var(--primaryColor);
+}
+.moduleStyle {
+    color: lightskyblue;
+}
+.booleanStyle {
+    color: #0B6374;
+}
 
+.folderStyle {
+    color: #7AC943;
+}
+.fileStyle {
+    color: #CE9178;
+}
+.decoratorStyle {
+    color: yellow;
+}
+.errorStyle {
+    color: #FD5B58;
+}
+.codeIndent {
+    margin-left: 40px;
+}

@@ -7,24 +7,62 @@
 .featureStateGrid1 {
     display: flex;
     flex-direction: row;
-    column-gap: 40px;
+    column-gap: 30px;
     width: 100%;
 
 }
 
 .featureStateGrid1PicBlock {
-    width:55%;
+    width:85%;
 }
 #featureStatGridPic2 {
     width: 35vmax;
 }
 .featureStateGrid1CodeBlock {
-    width: 45%;
+    width: 50%;
     display: flex;
     flex-direction: column;
-    row-gap: 40px;
+    row-gap: 10px;
+}
+.featureCodeUsersBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: flex-end;
+    padding: 0px;
+}
+.featureCodeUsersBlock .codeBlock {
+    padding-top: 0;
+    margin-top: 0px;
+    align-self: flex-start;
+    width: 100%;
 }
 
+.featureCodeProductsBlock {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: flex-start;
+}
+.featureCodeProductsBlock .codeBlock {
+    padding-top: 0;
+    margin-top: 0px;
+    align-self: flex-start;
+    width: 100%;
+}
+
+.featureSliceTitle {
+    margin-top: 0px;
+    padding-top: 0px;
+    justify-self: flex-start;
+    font-size: 1.5rem;
+}
+.featureCodeProductsBlock .codeBlock {
+    padding-top: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
 .featureStateGrid2 {
     display: flex;
     flex-direction: column;
@@ -49,4 +87,27 @@
 }
 .featureStateGrid2CodeBlock1 {
 
+}
+
+.propertyStyle {
+    margin-left: 40px;
+    color: lightskyblue;
+}
+.booleanStyle {
+    color: darkblue;
+}
+
+.numberStyle {
+
+}
+.featureSlice {
+    list-style: none;
+    
+}
+
+.featureSlice li {
+    font-size: 12px;
+}
+p.propertyStyle {
+    margin: 0px;
 }

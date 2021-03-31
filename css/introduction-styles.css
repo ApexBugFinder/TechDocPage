@@ -8,13 +8,15 @@
     align-items: center;
     display: grid;
     grid-template-columns: 2fr 1fr 3fr 1fr 3fr;
-    grid-template-rows: 100%;
-    grid-template-areas: "ngrx oper8orEq angular oper8or redux"
+    grid-template-rows: 90%;
+    grid-template-areas: "ngrx oper8orEq angular oper8or redux";
+    margin: auto;
 }
 .ngrxDiv {
     grid-area: ngrx;
 
-    
+    align-self:flex-start;
+    margin-right: 40px;
 
 }
 .equationContent {
@@ -42,7 +44,7 @@
 }
 .equationContent p {
     display: inline-block;
-    vertical-align: center;
+    vertical-align: top;
     margin-top: 20px;
     margin-left: 60px;
     justify-self: baseline;
@@ -71,7 +73,18 @@
 .oper8orDivEq {
     grid-area: oper8orEq;
     font-size: 40px;
+
 }
 .reduxDiv {
     grid-area: redux;
+}
+
+.quote {
+    font-style: italic;
+    margin: auto;
+
+}
+.quoteAuthor {
+    margin: auto;
+    margin-left: 60%;
 }

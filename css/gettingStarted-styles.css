@@ -32,13 +32,17 @@
     "codespot"
     "filename"
     ;
-    justify-content: center;
+    
     /* margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
     margin-bottom: 0px; */
-    margin: 40px auto;
+ 
                         
+}
+.gettingStartedCodeBlock1 {
+    margin: 40px 0;
+    justify-content: center;
 }
 .codeInputBlock {
     grid-area: codespot;
@@ -56,8 +60,9 @@
 .codeInputBlock p {
     font-family: sans-serif;
     font-size: 14px;
-    
+    margin: 0px;
 }
+
 
 .codefileInfo {
     grid-area: filename;
@@ -85,23 +90,7 @@ pre code {
     height: auto;
     white-space: normal;
 }
-.importStyle {
-    color: var(--primaryColor);
-}
-.moduleStyle {
-    color: lightskyblue;
-}
 
-.folderStyle {
-    color: #7AC943;
-}
-.fileStyle {
-    color: #CE9178;
-}
-.decoratorStyle {
-    color: yellow;
-}
-.codeIndent {
-    margin-left: 40px;
-}
+
+
 
