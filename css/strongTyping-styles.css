@@ -2,23 +2,23 @@
     display: flex;
     flex-direction: row;
     column-gap: 20px;
-    width: 80%;
+    width: 90%;
     align-items: center;
     margin: auto;
 }
 
 .stronglyTypedGrid1Pic {
-    max-width: 60%;
+    max-width: 80%;
     overflow: hidden;
 
 }
 #strongtypedPic1 {
-    width: 80%;
+    width: 90%;
 }
 .stronglyTypedGrid1CodeBlock1 {
    
 }
 
 .stronglyTypedGrid1CodeBlock1 .codeInputBlock {
-    width: 500px;
+    width: 400px;
 }

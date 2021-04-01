@@ -1,285 +1,259 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>NGRX Jump Starter</title>
-    <meta name="description" content="Getting Started With NGRX" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://use.typekit.net/owi5hbd.css" />
 
-    <link rel="stylesheet" href="css/styles.css" />
+<head>
+  <meta charset="utf-8" />
+  <title>NGRX Jump Starter</title>
+  <meta name="description" content="Getting Started With NGRX" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://use.typekit.net/owi5hbd.css" />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <div class="sideMenuContainer">
-      <div id="nav-bar" class="nav-bar">
-        <ul class="nav-list">
-          <li class="nav-li">NGRX: The Basics</li>
-          <li class="nav-li">
-            <a href="#introduction" class="nav-item">Introduction</a>
-          </li>
-          <li class="nav-li">
-            <a href="#reduxPattern" class="nav-item">Redux Pattern</a>
-          </li>
-          <li class="nav-li">
-            <a href="#gettingStarted" class="nav-item">Getting Started</a>
-          </li>
-          <li class="nav-li">
-              <a href="#state" class="nav-item">State</a>
-            </li>
-          <li class="nav-li">
-            <a href="#initializeState" class="nav-item">Initialize State</a>
-          </li>
-          <li class="nav-li">
-            <a href="#featureStateManagement" class="nav-item"
-              >Feature State Management</a
-            >
-          </li>
-          <li class="nav-li">
-            <a href="#strongTyping" class="nav-item"
-              >Strong Typing </a
-            >
-          </li>
-          <li class="nav-li">
-            <a href="#creatingFeatureSelectors" class="nav-item">Creating Feature Selectors</a>
-          </li>
-          <li class="nav-li">
-            <a href="#actions" class="nav-item">Actions</a>
-          </li>
-          <li class="nav-li">
-            <a href="#dispatchingActions" class="nav-item">Dispatching Actions</a>
-          </li>
-          <li class="nav-li">
-            <a href="#reducers" class="nav-item">Reducer</a>
-          </li>
-          <li class="nav-li">
-            <a href="#utilizingFeatureSelectors" class="nav-item"
-              >Utilizing Feature Selectors</a
-            >
-          </li>
-          <li class="nav-li">
-            <a href="#effects" class="nav-item">Effects</a>
-          </li>
-          <li class="nav-li">
-            <a href="#devtools" class="nav-item">Dev Tools</a>
-          </li>
-        </ul>
-      </div>
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="sideMenuContainer">
+    <div id="nav-bar" class="nav-bar">
+      <ul class="nav-list">
+        <li class="nav-li">NGRX: The Basics</li>
+        <li class="nav-li">
+          <a href="#introduction" class="nav-item">Introduction</a>
+        </li>
+        <li class="nav-li">
+          <a href="#reduxPattern" class="nav-item">Redux Pattern</a>
+        </li>
+        <li class="nav-li">
+          <a href="#gettingStarted" class="nav-item">Getting Started</a>
+        </li>
+        <li class="nav-li">
+          <a href="#state" class="nav-item">State</a>
+        </li>
+        <li class="nav-li">
+          <a href="#initializeState" class="nav-item">Initialize State</a>
+        </li>
+        <li class="nav-li">
+          <a href="#featureStateManagement" class="nav-item">Feature State Management</a>
+        </li>
+        <li class="nav-li">
+          <a href="#strongTyping" class="nav-item">Strong Typing </a>
+        </li>
+        <li class="nav-li">
+          <a href="#creatingFeatureSelectors" class="nav-item">Creating Feature Selectors</a>
+        </li>
+        <li class="nav-li">
+          <a href="#actions" class="nav-item">Actions</a>
+        </li>
+        <li class="nav-li">
+          <a href="#dispatchingActions" class="nav-item">Dispatching Actions</a>
+        </li>
+        <li class="nav-li">
+          <a href="#reducers" class="nav-item">Reducer</a>
+        </li>
+        <li class="nav-li">
+          <a href="#utilizingFeatureSelectors" class="nav-item">Utilizing Feature Selectors</a>
+        </li>
+        <li class="nav-li">
+          <a href="#effects" class="nav-item">Effects</a>
+        </li>
+        <li class="nav-li">
+          <a href="#devtools" class="nav-item">Dev Tools</a>
+        </li>
+      </ul>
     </div>
-    <div class="contentContainer">
-      <header class="header">
-       
-        <div class="headertitle">
-          <span class="maintitle">NG</span>
-           <div class="siteLogoContainer">
+  </div>
+  <div class="contentContainer">
+    <header class="header">
+
+      <div class="headertitle">
+        <span class="maintitle">NG</span>
+        <div class="siteLogoContainer">
           <img src="./images/SVG/ngrx_logo.svg" alt="logo" class="siteLogo" />
         </div>
-          <span class="maintitle2">RX</span>
-        </div>
+        <span class="maintitle2">RX</span>
+      </div>
 
-        <div class="subTitle">The Basics</div>
-      </header>
+      <div class="subTitle">The Basics</div>
+    </header>
 
-      <main class="main" id="main-doc">
-        <section id="introduction" class="infoChapter">
-          <div class="sectionContainer">
-            <div class="chapterHeading">
-              <h3>Introduction</h3>
-            </div>
-            <div class="chapterContent">
-              <h4>What is NgRx?</h4>
-              <p>
-                NgRx is a framework for building reactive applications in
-                Angular. Ngrx provides libraries for:
-              </p>
+    <main class="main" id="main-doc">
+      <section id="introduction" class="infoChapter">
+        <div class="sectionContainer">
+          <div class="chapterHeading">
+            <h3>Introduction</h3>
+          </div>
+          <div class="chapterContent">
+            <h4>What is NgRx?</h4>
+            <p>
+              NgRx is a framework for building reactive applications in
+              Angular. Ngrx provides libraries for:
+            </p>
 
-              <ul class="chapterContent-ul">
-                <li class="chapterContent-li">
-                  Managing global and local state.
-                </li>
-                <li class="chapterContent-li">Entity collection management</li>
-                <li class="chapterContent-li">
-                  Integration with the Angular router
-                </li>
-                <li class="chapterContent-li">
-                  Developer tooling that enhances developer experience when
-                  building many different types of applications
-                </li>
-                <li class="chapterContent-li">
-                  Isolation of side effects to promote a cleaner component
-                  architecture
-                </li>
-              </ul>
+            <ul class="chapterContent-ul">
+              <li class="chapterContent-li">
+                Managing global and local state.
+              </li>
+              <li class="chapterContent-li">Entity collection management</li>
+              <li class="chapterContent-li">
+                Integration with the Angular router
+              </li>
+              <li class="chapterContent-li">
+                Developer tooling that enhances developer experience when
+                building many different types of applications
+              </li>
+              <li class="chapterContent-li">
+                Isolation of side effects to promote a cleaner component
+                architecture
+              </li>
+            </ul>
 
-              <p>
-                In this NgRx kick starter we will try to help you become
-                acquainted with the basic operation of RgRx. We will focus on
-                the highlighted functionality listed above and the advantages of
-                NgRx implementation. As your application's complexity
-                increasesyou will find the need for @ngrx/entity and
-                @ngrx/router-store.
-              </p>
+            <p>
+              In this NgRx kick starter we will try to help you become
+              acquainted with the basic operation of RgRx. We will focus on
+              the highlighted functionality listed above and the advantages of
+              NgRx implementation. As your application's complexity
+              increasesyou will find the need for @ngrx/entity and
+              @ngrx/router-store.
+            </p>
 
-              <h4>How is NgRx pronounced?</h4>
-              <p>
-                Don't worry it is simple, when you say it you just spell it out
-                letter by letter... "N G R X"
-              </p>
+            <h4>How is NgRx pronounced?</h4>
+            <p>
+              Don't worry it is simple, when you say it you just spell it out
+              letter by letter... "N G R X"
+            </p>
 
-              <h4>What does NgRx mean?</h4>
-              <p>
-                Like stated above NgRx is a framework for building reactive
-                applications in angular. This means some very smart developers
-                combined the Redux Pattern with Angular and created a host of
-                libraries and tools to manage your application's state.
-              </p>
+            <h4>What does NgRx mean?</h4>
+            <p>
+              Like stated above NgRx is a framework for building reactive
+              applications in angular. This means some very smart developers
+              combined the Redux Pattern with Angular and created a host of
+              libraries and tools to manage your application's state.
+            </p>
 
-              <div class="ngrxEquationContainer">
-                <div class="ngrxDiv">
-                  <div class="equationContent">
-                    <div class="equationContentContainer1">
-                      <img
-                        src="./images/SVG/ngrx_logo.svg"
-                        alt=""
-                        class="ngrxEquationLogo"
-                      />
-                      <p class="nextToLogo">NgRx</p>
-                      
-                    </div>
+            <div class="ngrxEquationContainer">
+              <div class="ngrxDiv">
+                <div class="equationContent">
+                  <div class="equationContentContainer1">
+                    <img src="./images/SVG/ngrx_logo.svg" alt="" class="ngrxEquationLogo" />
+                    <p class="nextToLogo">NgRx</p>
+
                   </div>
                 </div>
-                <div class="oper8orDivEq">=</div>
-                <div class="angularDiv">
-                  <div class="equationContent">
-                    <div class="equationContentContainer1">
-                      <img
-                        src="./images/SVG/angularLogo.svg"
-                        alt=""
-                        class="ngrxEquationLogo"
-                      />
-                      <p class="nextToLogo">Angular</p>
-                    </div>
-                    <div class="equationContentContainer2">
-                      <ul class="listIndent">
-                        <li>Component</li>
-                        <li>View</li>
-                      </ul>
-                    </div>
+              </div>
+              <div class="oper8orDivEq">=</div>
+              <div class="angularDiv">
+                <div class="equationContent">
+                  <div class="equationContentContainer1">
+                    <img src="./images/SVG/angularLogo.svg" alt="" class="ngrxEquationLogo" />
+                    <p class="nextToLogo">Angular</p>
                   </div>
-                </div>
-
-                <div class="oper8orDiv">+</div>
-
-                <div class="reduxDiv">
-                  <div class="equationContent">
-                    <div class="equationContentContainer1">
-                      <img
-                        src="./images/SVG/reduxLogo.svg"
-                        alt=""
-                        class="ngrxEquationLogo"
-                      />
-                      <p class="nextToLogo">Redux</p>
-                    </div>
-                    <div class="equationContentContainer2">
-                      <ul>
-                        <li>State / Store</li>
-                        <li>Reducers</li>
-                        <li>Actions</li>
-                        <li>Payloads</li>
-                        <li>Effects</li>
-                      </ul>
-                    </div>
+                  <div class="equationContentContainer2">
+                    <ul class="listIndent">
+                      <li>Component</li>
+                      <li>View</li>
+                    </ul>
                   </div>
                 </div>
               </div>
 
-              <h4>Where can we find more information?</h4>
-              <p>Information for this kickstarter was pieced together from:</p>
-              <ul class="chapterContent-ul">
-                <li class="chapterContent-li">
-                  PluralSight's
-                  <a
-                    href="https://www.pluralsight.com/courses/angular-ngrx-getting-started"
-                    alt="link to pluralsight's Angular NgRx Getting Started course"
-                    >Angular NgRx: Getting Started</a
-                  >
-                  by Deborah Kurata & Duncan Hunter
-                </li>
-                <li class="chapterContent-li">
-                  <a href="https://ngrx.io">NgRx website</a>
-                </li>
-              </ul>
+              <div class="oper8orDiv">+</div>
 
-              <p>
-                You can download the code for this project so that you may
-                follow along
-                <a
-                  href="https://github.com/ApexBugFinder/Angular-NgRx-GettingStarted"
-                  >here</a
-                >
-              </p>
-
-              <h4>What are the advantages of NgRx?</h4>
-              <p class="quote">
-                ‘Redux is not great for making simple things quickly. It is
-                great for making really hard things simple’
-              </p>
-              <p class="quoteAuthor">- Jani Evakallio</p>
-
-              <p>
-                NgRx simplifies a complex problem by standardizing the process
-                of dealing with a shared state. A shared state grows in
-                complexity as the application grows as more components become
-                dependent on the shared state and can effect the shared state at
-                any time. Implementing NgRx can:
-              </p>
-
-              <ul class="chapterContent-ul">
-                <li class="chapterContent-li">Simplify code</li>
-                <li class="chapterContent-li">Easier to track changes</li>
-                <li class="chapterContent-li">Easier to debug and test</li>
-                <li class="chapterContent-li">
-                  Implement an angular change detection strategy in components -
-                  improve performance
-                </li>
-                <li class="chapterContent-li">
-                  Testing Reducers are easier to test
-                </li>
-                <li class="chapterContent-li">Tooling Advantages</li>
-                <ul class="chapterContent-ul2">
-                  <li class="chapterContent-li">History of state changes</li>
-                  <li class="chapterContent-li">Visualize state tree</li>
-                  <li class="chapterContent-li">
-                    Debug by undoing and redoing state changes
-                  </li>
-                  <li class="chapterContent-li">Advanced Logging</li>
-                </ul>
-              </ul>
+              <div class="reduxDiv">
+                <div class="equationContent">
+                  <div class="equationContentContainer1">
+                    <img src="./images/SVG/reduxLogo.svg" alt="" class="ngrxEquationLogo" />
+                    <p class="nextToLogo">Redux</p>
+                  </div>
+                  <div class="equationContentContainer2">
+                    <ul>
+                      <li>State / Store</li>
+                      <li>Reducers</li>
+                      <li>Actions</li>
+                      <li>Payloads</li>
+                      <li>Effects</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <h4>Where can we find more information?</h4>
+            <p>Information for this kickstarter was pieced together from:</p>
+            <ul class="chapterContent-ul">
+              <li class="chapterContent-li">
+                PluralSight's
+                <a href="https://www.pluralsight.com/courses/angular-ngrx-getting-started"
+                  alt="link to pluralsight's Angular NgRx Getting Started course">Angular NgRx: Getting Started</a>
+                by Deborah Kurata & Duncan Hunter
+              </li>
+              <li class="chapterContent-li">
+                <a href="https://ngrx.io">NgRx website</a>
+              </li>
+            </ul>
+
+            <p>
+              You can download the code for this project so that you may
+              follow along
+              <a href="https://github.com/ApexBugFinder/Angular-NgRx-GettingStarted">here</a>
+            </p>
+
+            <h4>What are the advantages of NgRx?</h4>
+            <p class="quote">
+              ‘Redux is not great for making simple things quickly. It is
+              great for making really hard things simple’
+            </p>
+            <p class="quoteAuthor">- Jani Evakallio</p>
+
+            <p>
+              NgRx simplifies a complex problem by standardizing the process
+              of dealing with a shared state. A shared state grows in
+              complexity as the application grows as more components become
+              dependent on the shared state and can effect the shared state at
+              any time. Implementing NgRx can:
+            </p>
+
+            <ul class="chapterContent-ul">
+              <li class="chapterContent-li">Simplify code</li>
+              <li class="chapterContent-li">Easier to track changes</li>
+              <li class="chapterContent-li">Easier to debug and test</li>
+              <li class="chapterContent-li">
+                Implement an angular change detection strategy in components -
+                improve performance
+              </li>
+              <li class="chapterContent-li">
+                Testing Reducers are easier to test
+              </li>
+              <li class="chapterContent-li">Tooling Advantages</li>
+              <ul class="chapterContent-ul2">
+                <li class="chapterContent-li">History of state changes</li>
+                <li class="chapterContent-li">Visualize state tree</li>
+                <li class="chapterContent-li">
+                  Debug by undoing and redoing state changes
+                </li>
+                <li class="chapterContent-li">Advanced Logging</li>
+              </ul>
+            </ul>
           </div>
-        </section>
-        <section id="reduxPattern" class="infoChapter">
-          <div class="sectionContainer">
-            <div class="chapterHeading">
-              <h3>Redux Pattern</h3>
-            </div>
-            <div class="chapterContent">
-              <p>
-                The redux pattern is very handy for updating and tracking
-                changes to a data store that multiple resources rely on for
-                up-to-date information simultaneously. How does this pattern
-                keep all components dependent on a single source synchronized to
-                one data source?
-              </p>
-              <div class="reduxListContainer">
-                  
-              
+        </div>
+      </section>
+      <section id="reduxPattern" class="infoChapter">
+        <div class="sectionContainer">
+          <div class="chapterHeading">
+            <h3>Redux Pattern</h3>
+          </div>
+          <div class="chapterContent">
+            <p>
+              The redux pattern is very handy for updating and tracking
+              changes to a data store that multiple resources rely on for
+              up-to-date information simultaneously. How does this pattern
+              keep all components dependent on a single source synchronized to
+              one data source?
+            </p>
+            <div class="reduxListContainer">
+
+
               <ul class="chapterContent-ul-numbered">
                 <li class="chapterContent-li">
                   It uses selectors to get the latest information that is stored
@@ -311,70 +285,58 @@
                 </li>
               </ul>
             </div>
-              <img src="./videos/NGRX-reduxPatttern-slide4.gif" alt="" class="reduxGiff">
-              <p>
-                The process happens over and over again. The store cannot be
-                changed directly and all changes to the store must follow this
-                strict process in order to protect the integrity of the data.
-              </p>
-            </div>
+            <img src="./videos/NGRX-reduxPatttern-slide4.gif" alt="" class="reduxGiff">
+            <p>
+              The process happens over and over again. The store cannot be
+              changed directly and all changes to the store must follow this
+              strict process in order to protect the integrity of the data.
+            </p>
           </div>
-        </section>
-        <section id="gettingStarted" class="infoChapter">
-          <div class="sectionContainer">
-            <div class="chapterHeading">
-              <h3>Getting Started</h3>
-            </div>
-            <div class="chapterContent">
-              <h4>Let's install NgRx:</h4>
-              
-              <div class="chapterContent-ul">
-                  <li class="chapterContent-li">
-                    <p class="ngrxPreReqs">
-                        First install prerequisites:
-                        <a class="node" href="https://nodejs.org" target="#blank"
-                          ><img
-                            class="logoSize"
-                            src="./images/SVG/node_logo.svg"
-                            alt="node logo"
-                        /></a>
-                        <a class="npm" href="https://npmjs.com" target="#blank"
-                          ><img
-                            class="logoSize"
-                            src="./images/SVG/npm-logo-red.svg"
-                            alt="node logo"
-                        /></a>
-                        <a class="angular" href="https://angular.io" target="#blank"
-                          ><img
-                            class="logoSize"
-                            src="./images/SVG/angular.svg"
-                            alt="node logo"
-                        /></a>
-                      </p>
-                  </li>
-                  <li class="chapterContent-li">
-                    <p>then install the ngrx Store</p>
-              
-                    <div class="terminalCode">
-                      <pre>
-                                         
-                                             
-                          <kbd>npm install @ngrx/store --save</kbd> 
+        </div>
+      </section>
+      <section id="gettingStarted" class="infoChapter">
+        <div class="sectionContainer">
+          <div class="chapterHeading">
+            <h3>Getting Started</h3>
+          </div>
+          <div class="chapterContent">
+            <h4>Let's install NgRx:</h4>
+
+            <div class="chapterContent-ul">
+              <li class="chapterContent-li">
+                <p class="ngrxPreReqs">
+                  First install prerequisites:
+                  <a class="node" href="https://nodejs.org" target="#blank"><img class="logoSize"
+                      src="./images/SVG/node_logo.svg" alt="node logo" /></a>
+                  <a class="npm" href="https://npmjs.com" target="#blank"><img class="logoSize"
+                      src="./images/SVG/npm-logo-red.svg" alt="node logo" /></a>
+                  <a class="angular" href="https://angular.io" target="#blank"><img class="logoSize"
+                      src="./images/SVG/angular.svg" alt="node logo" /></a>
+                </p>
+              </li>
+              <li class="chapterContent-li">
+                <p>then install the ngrx Store</p>
+
+                <div class="terminalCode">
+                  <pre>
+
+
+                          <kbd><span class="decoratorStyle">> </span>npm install @ngrx/store --save</kbd> 
                        
                   
                       </pre>
-                    </div>
-                  </li>
-                  <li class="chapterContent-li">
-                    <p>
-                        Import StoreModule into the project imports in your
-                        <span class="filename">app.module.ts</span> file :
-                      </p>
-        
-                      <div class="codeBlock gettingStartedCodeBlock1">
-                        <pre id="codeInputBlock" class="codeInputBlock">
-        
-                                                
+                </div>
+              </li>
+              <li class="chapterContent-li">
+                <p>
+                  Import StoreModule into the project imports in your
+                  <span class="filename">app.module.ts</span> file :
+                </p>
+
+                <div class="codeBlock gettingStartedCodeBlock1">
+                  <pre id="codeInputBlock" class="codeInputBlock">
+
+
                                                     <code id="coderBlock">
                                                         
                                                        
@@ -399,122 +361,122 @@
                                                     
                                                     </code>
                                                 </pre>
-        
-                        <div class="codefileInfo">
-                          <span class="folderStyle">app</span> >
-                          <span class="folderStyle">state</span> >
-                          <span class="filename">app.state.ts</span>
-                        </div>
-                      </div>
-                  </li>
-              </div>
-              
 
-             
-              
-
-             
-              <p>Congratulations you have now added NgRx to your project.</p>
-            </div>
-          </div>
-        </section>
-        <section id="state" class="infoChapter">
-          <div class="sectionContainer">
-            <div class="chapterHeading">
-              <h3>State - Immutable Store</h3>
-            </div>
-            <div class="chapterContent">
-              <p>
-                Every angular application must manage its’ state. As your
-                application grows so does the size of the state that the
-                application has to manage. Larger state means more application
-                to manage more information, more state to manage, more actions
-                and reactions to state changes to track and test. Very powerful
-                when all the pieces of application state is held in one place
-                the store because it will help with reasoning about user
-                interaction, debugging, performance and avoiding race
-                conditions.
-              </p>
-
-              <p>
-                The store is what we call an immutable store. Immutability is
-                paramount to the integrity of the store. Immutability insures
-                the data is accurate across all components by insuring there is
-                only one path to changing the store. For the redux pattern to
-                work you must follow the redux principals of immutability:
-              </p>
-
-              <ul class="chapterContent-ul">
-                <li class="chapterContent-li">
-                  If you need to change state of the store always replace the
-                  whole state object and not mutate part of it
-                </li>
-                <li class="chapterContent-li">
-                  Only use actions to change the state of the store
-                </li>
-                <li class="chapterContent-li">
-                  Data that never changes is easier to reason about, track, and
-                  test.
-                </li>
-              </ul>
-
-              <p>
-                What kind of information can I store in my State/Immutable
-                Store?
-              </p>
-
-              <div class="doDontsBlock">
-                <div class="dosDontsTitleBlock">
-                  <div class="dosTitle"><p>Do's</p></div>
-                  <div class="dontsTitle"><p>Don'ts</p></div>
-                </div>
-                <div class="dosDontsContentBlock">
-                  <div class="doBlock">
-                    <p>View State</p>
-                    <p>User Information</p>
-                    <p>Entity Data</p>
-                    <p>User Selection and Input</p>
-                  </div>
-
-                  <div class="dontBlock">
-                    <p>Unshared State</p>
-                    <p>Angular form state</p>
-                    <p>Non-serializable state - Router State</p>
+                  <div class="codefileInfo">
+                    <span class="folderStyle">app</span> >
+                    <span class="folderStyle">state</span> >
+                    <span class="filename">app.state.ts</span>
                   </div>
                 </div>
+              </li>
+            </div>
+
+
+
+
+
+
+            <p>Congratulations you have now added NgRx to your project.</p>
+          </div>
+        </div>
+      </section>
+      <section id="state" class="infoChapter">
+        <div class="sectionContainer">
+          <div class="chapterHeading">
+            <h3>State - Immutable Store</h3>
+          </div>
+          <div class="chapterContent">
+            <p>
+              Every angular application must manage its’ state. As your
+              application grows so does the size of the state that the
+              application has to manage. Larger state means more application
+              to manage more information, more state to manage, more actions
+              and reactions to state changes to track and test. Very powerful
+              when all the pieces of application state is held in one place
+              the store because it will help with reasoning about user
+              interaction, debugging, performance and avoiding race
+              conditions.
+            </p>
+
+            <p>
+              The store is what we call an immutable store. Immutability is
+              paramount to the integrity of the store. Immutability insures
+              the data is accurate across all components by insuring there is
+              only one path to changing the store. For the redux pattern to
+              work you must follow the redux principals of immutability:
+            </p>
+
+            <ul class="chapterContent-ul">
+              <li class="chapterContent-li">
+                If you need to change state of the store always replace the
+                whole state object and not mutate part of it
+              </li>
+              <li class="chapterContent-li">
+                Only use actions to change the state of the store
+              </li>
+              <li class="chapterContent-li">
+                Data that never changes is easier to reason about, track, and
+                test.
+              </li>
+            </ul>
+
+            <p>
+              What kind of information can I store in my State/Immutable
+              Store?
+            </p>
+
+            <div class="doDontsBlock">
+              <div class="dosDontsTitleBlock">
+                <div class="dosTitle">
+                  <p>Do's</p>
+                </div>
+                <div class="dontsTitle">
+                  <p>Don'ts</p>
+                </div>
+              </div>
+              <div class="dosDontsContentBlock">
+                <div class="doBlock">
+                  <p>View State</p>
+                  <p>User Information</p>
+                  <p>Entity Data</p>
+                  <p>User Selection and Input</p>
+                </div>
+
+                <div class="dontBlock">
+                  <p>Unshared State</p>
+                  <p>Angular form state</p>
+                  <p>Non-serializable state - Router State</p>
+                </div>
               </div>
             </div>
           </div>
-        </section>
-        <section id="initializeState" class="infoChapter">
-          <div class="sectionContainer">
-            <div class="chapterHeading">
-              <h3>Initialize State</h3>
-            </div>
-            <div class="chapterContent">
-              <p>
-                Now that you have NgRx running and we need to add initialize our
-                store with some data. Create app.state.ts file in a
-                <span class="folderInTextStyle">state</span> folder at the root
-                of your project. In there you will initialize your State. Your
-                folders should match the figure below:
-              </p>
+        </div>
+      </section>
+      <section id="initializeState" class="infoChapter">
+        <div class="sectionContainer">
+          <div class="chapterHeading">
+            <h3>Initialize State</h3>
+          </div>
+          <div class="chapterContent">
+            <p>
+              Now that you have NgRx running and we need to add initialize our
+              store with some data. Create app.state.ts file in a
+              <span class="folderInTextStyle">state</span> folder at the root
+              of your project. In there you will initialize your State. Your
+              folders should match the figure below:
+            </p>
 
-              <div class="initializeStateGridBlock">
-                <div class="picBlock">
-                  <img
-                    class="appStateTreeFig"
-                    id="appStateTreeFig"
-                    src="./images/appStateTree.jpg"
-                    alt="Figure of App State Tree"
-                  />
-                </div>
-                <div class="rightSideBlock">
-                  <div class="initCode">
-                    <div class="codeBlock">
-                      <pre id="codeInputBlock" class="codeInputBlock">
-       
-                                               
+            <div class="initializeStateGridBlock">
+              <div class="picBlock">
+                <img class="appStateTreeFig" id="appStateTreeFig" src="./images/appStateTree.jpg"
+                  alt="Figure of App State Tree" />
+              </div>
+              <div class="rightSideBlock">
+                <div class="initCode">
+                  <div class="codeBlock">
+                    <pre id="codeInputBlock" class="codeInputBlock">
+
+
                                                    <code id="coderBlock">
                                                        
                                                       
@@ -530,105 +492,93 @@
                                                    </code>
                                                </pre>
 
-                      <div class="codefileInfo">
-                        <span class="folderStyle">app</span> >
-                        <span class="folderStyle">state</span> >
-                        <span class="filename">app.state.ts</span>
-                      </div>
+                    <div class="codefileInfo">
+                      <span class="folderStyle">app</span> >
+                      <span class="folderStyle">state</span> >
+                      <span class="filename">app.state.ts</span>
                     </div>
                   </div>
-                  <div class="initText">
-                    <p>
-                      When the StoreModule initializes the store it will
-                      implement the content in this folder at the root This is
-                      the content that is loaded that will operate across all
-                      modules and features.
-                    </p>
-                  </div>
+                </div>
+                <div class="initText">
+                  <p>
+                    When the StoreModule initializes the store it will
+                    implement the content in this folder at the root This is
+                    the content that is loaded that will operate across all
+                    modules and features.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-        <section id="featureStateManagement" class="infoChapter">
-          <div class="sectionContainer">
-            <div class="chapterHeading">
-              <h3>Feature State Management</h3>
-            </div>
-            <div class="chapterContent">
-              <p>
-                Your store is a JavaScript object that is destroyed when the
-                application is restarted. It operates as a client side database
-                that holds the state of the application. Each bit of state is
-                defined by a property. This state will grow as the application
-                grows and become unmanageable. But when married to the logical
-                angular feature module scheme the state can grow along with the
-                application and maintain functionality. Therefore a portion of
-                the state that corresponds with a feature will be considered a
-                slice and named according to its respective slice as in
-                ‘products slice’ or ‘user slice’. Store operates like an
-                in-memory database and is destroyed when the browser is
-                refreshed
-              </p>
+        </div>
+      </section>
+      <section id="featureStateManagement" class="infoChapter">
+        <div class="sectionContainer">
+          <div class="chapterHeading">
+            <h3>Feature State Management</h3>
+          </div>
+          <div class="chapterContent">
+            <p>
+              Your store is a JavaScript object that is destroyed when the
+              application is restarted. It operates as a client side database
+              that holds the state of the application. Each bit of state is
+              defined by a property. This state will grow as the application
+              grows and become unmanageable. But when married to the logical
+              angular feature module scheme the state can grow along with the
+              application and maintain functionality. Therefore a portion of
+              the state that corresponds with a feature will be considered a
+              slice and named according to its respective slice as in
+              ‘products slice’ or ‘user slice’. Store operates like an
+              in-memory database and is destroyed when the browser is
+              refreshed
+            </p>
 
-              <img
-                id="featureStateTree"
-                src="./images/SVG/Tree.svg"
-                alt="feature state tree pic"
-              />
+            <img id="featureStateTree" src="./images/SVG/Tree.svg" alt="feature state tree pic" />
 
-              <p>
-                The application will function as a tree of features. The
-                branches of the tree represent independent features. Each
-                feature will implement its own Redux pattern, complete with its
-                own store, reducer, actions, selectors and effects. The features
-                manage their own slice of the store, which helps simplify
-                management of large applications that's complexity would
-                otherwise be unmanageable.
-              </p>
+            <p>
+              The application will function as a tree of features. The
+              branches of the tree represent independent features. Each
+              feature will implement its own Redux pattern, complete with its
+              own store, reducer, actions, selectors and effects. The features
+              manage their own slice of the store, which helps simplify
+              management of large applications that's complexity would
+              otherwise be unmanageable.
+            </p>
 
-              <div class="featureStateGrid1">
-                <div class="featureStateGrid1PicBlock">
-                  <img
-                    src="./images/featureStateManagement.png"
-                    alt="Shows the multiple modules feeding the app state root"
-                    id="featureStatGridPic2"
-                  />
+            <div class="featureStateGrid1">
+              <div class="featureStateGrid1PicBlock">
+                <img src="./images/featureStateManagement.png"
+                  alt="Shows the multiple modules feeding the app state root" id="featureStatGridPic2" />
+              </div>
+
+              <div class="featureStateGrid1CodeBlock">
+
+                <div class="featureCodeUsersBlock">
+                  <p class="featureSliceTitle"><span class="empFeature">Feature</span>: User</p>
+                  <div class="codeBlock">
+                    <pre class="codeInputBlock">
+
+                                          <code id="coderBlock">                                                   
+                                            <p>{</p>
+                                              <p class="propertyStyle">isAuthenticated: <span class="booleanStyle">true</span>,</p>
+                                              <p class="propertyStyle">userId: <span class="fileStyle">`kdkdjggjj`</span>,</p>
+                                              <p class="propertyStyle">userName: <span class="fileStyle">`BobbyBooShay3000`</span>,</p>
+                                              <p class="propertyStyle">userProfilePic: <span class="fileStyle">`...redux-logo.png`</span>,</p>
+                                              <p class="propertyStyle">loginExp: <span class="decoratorStyle">4444444</span></p>
+                                              <p>}</p>    
+
+                                          
+                                          </code>
+                            </pre>
+
+
+                  </div>
                 </div>
 
-                <div class="featureStateGrid1CodeBlock">
-                  
-                  <div class="featureCodeUsersBlock">
-                    <p class="featureSliceTitle">Feature: User</p>
-                    <div class="codeBlock">
-                      <pre  class="codeInputBlock">
-                                               
-                                                   <code id="coderBlock">                                                   
-                                                      <p>{</p>
-                                                        <p class="propertyStyle">isAuthenticated: <span class="booleanStyle">true</span>,</p>
-                                                        <p class="propertyStyle">userId: <span class="fileStyle">`kdkdjggjj`</span>,</p>
-                                                        <p class="propertyStyle">userName: <span class="fileStyle">`BobbyBooShay3000`</span>,</p>
-                                                        <p class="propertyStyle">userProfilePic: <span class="fileStyle">`...redux-logo.png`</span>,</p>
-                                                        <p class="propertyStyle">loginExp: <span class="decoratorStyle">4444444</span></p>
-                                                       <p>}</p>    
-
-                                                   
-                                                   </code>
-                                               </pre>
-
-                      <!-- <div class="codefileInfo">
-                        
-                      </div> -->
-                    </div>
-                  </div>
-
-                  <div class="featureCodeProductsBlock">
-                    <p class="featureSliceTitle">Feature: Product</p>
-                    <div class="codeBlock">
-                      <pre
-                        id="codeInputBlock"
-                        class="codeInputBlock"
-                      >                                                
+                <div class="featureCodeProductsBlock">
+                  <p class="featureSliceTitle"><span class="empFeature">Feature</span>: Product</p>
+                  <div class="codeBlock">
+                    <pre id="codeInputBlock" class="codeInputBlock">
                                                    <code id="coderBlock">
                                                       
                                                     <ul class="featureSlice">
@@ -654,40 +604,33 @@
                                                    </code>
                                                </pre>
 
-                      <!-- <div class="codefileInfo">
+                    <!-- <div class="codefileInfo">
                        
                       </div> -->
-                    </div>
                   </div>
                 </div>
               </div>
+            </div>
 
-              <p>
-                This redux pattern will work hand in hand with the feature's
-                Components and Views. In the figure above you can see product
-                information and user information is managed in their respective
-                feature module. For the application to recognize these branches
-                of the state they must be imported into their feature modules.
-                The definition of feature state resides in the feature's reducer
-                file and they are imported into their feature modules. And the
-                each module feature state subsequently imported into the
-                AppState. As seen below...
-              </p>
+            <p>
+              This redux pattern will work hand in hand with the feature's
+              Components and Views. In the figure above you can see product
+              information and user information is managed in their respective
+              feature module. For the application to recognize these branches
+              of the state they must be imported into their feature modules.
+              The definition of feature state resides in the feature's reducer
+              file and they are imported into their feature modules. And the
+              each module feature state subsequently imported into the
+              AppState. As seen below...
+            </p>
 
-              <div class="featureStateGrid2">
-                <div class="featureStateGrid2Pic">
-                  <img
-                    src="./images/featureStateImage3.png"
-                    alt="feature state composition"
-                    id="featureStatePic3"
-                  />
-                </div>
-                <div class="featureStateGrid2CodeBlock">
-                  <div class="featureStateGrid2CodeBlock1">
-                    <pre
-                      id="codeInputBlock"
-                      class="codeInputBlock"
-                    >                                               
+            <div class="featureStateGrid2">
+              <div class="featureStateGrid2Pic">
+                <img src="./images/SVG/featureStateSVG.svg" alt="feature state composition" id="featureStatePic3" />
+              </div>
+              <div class="featureStateGrid2CodeBlock">
+                <div class="featureStateGrid2CodeBlock1">
+                  <pre id="codeInputBlock" class="codeInputBlock">
                                                 <code id="coderBlock">
                                                    
                                                       
@@ -710,18 +653,15 @@
     
                                                 </code>
                                             </pre>
-                    <div class="codefileInfo">
-                      <span class="folderStyle">app</span> >
-                      <span class="folderStyle">users</span> >
-                      <span class="filename">user.module.ts</span>
-                    </div>
+                  <div class="codefileInfo">
+                    <span class="folderStyle">app</span> >
+                    <span class="folderStyle">users</span> >
+                    <span class="filename">user.module.ts</span>
                   </div>
+                </div>
 
-                  <div class="featureStateGrid2CodeBlock2">
-                    <pre
-                      id="codeInputBlock"
-                      class="codeInputBlock"
-                    >                                               
+                <div class="featureStateGrid2CodeBlock2">
+                  <pre id="codeInputBlock" class="codeInputBlock">
                                                 <code id="coderBlock">
                                                    
                                                       
@@ -747,43 +687,41 @@
     
                                                 </code>
                                             </pre>
-                    <div class="codefileInfo">
-                      <span class="folderStyle">app</span> >
-                      <span class="folderStyle">product</span> >
-                      <span class="filename">product.module.ts</span>
-                    </div>
+                  <div class="codefileInfo">
+                    <span class="folderStyle">app</span> >
+                    <span class="folderStyle">product</span> >
+                    <span class="filename">product.module.ts</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-        <section id="strongTyping" class="infoChapter">
-          <div class="sectionContainer">
-            <div class="chapterHeading">
-              <h3>Strong Typing - Feature State Management</h3>
-            </div>
-            <div class="chapterContent">  
-              <p>
-                One of the great advantages of working with Typescript is it's
-                ability to make your JavaScript Type safe. This adds an extra
-                layer of protection as your data passed and saved to your
-                client-side database (store) is checked for type compatibility.
-                When you first define the state properties they will have the
-                initial value of undefined, so we want to also provide the
-                initial values. This definition of your slice is located in your
-                feature state's reducer.ts located in the state folder of your
-                feature. Declaration of the slice includes the definition of the
-                data type
-              </p>
+        </div>
+      </section>
+      <section id="strongTyping" class="infoChapter">
+        <div class="sectionContainer">
+          <div class="chapterHeading">
+            <h3>Strong Typing - Feature State Management</h3>
+          </div>
+          <div class="chapterContent">
+            <p>
+              One of the great advantages of working with Typescript is it's
+              ability to make your JavaScript Type safe. This adds an extra
+              layer of protection as your data passed and saved to your
+              client-side database (store) is checked for type compatibility.
+              When you first define the state properties they will have the
+              initial value of undefined, so we want to also provide the
+              initial values. This definition of your slice is located in your
+              feature state's reducer.ts located in the state folder of your
+              feature. Declaration of the slice includes the definition of the
+              data type
+            </p>
 
-              <div class="stronglyTypedGrid1">
-                <div class="stronglyTypedGrid1Pic"><img src="./images/stronglyTypedPic1.png" alt="" class="" id="strongtypedPic1"></div>
-                <div class="stronglyTypedGrid1CodeBlock1">
-                  <pre
-                    id="codeInputBlock"
-                    class="codeInputBlock"
-                  >                                               
+            <div class="stronglyTypedGrid1">
+              <div class="stronglyTypedGrid1Pic"><img src="./images/SVG/stronglyTypedSVG.svg" alt="" class=""
+                  id="strongtypedPic1"></div>
+              <div class="stronglyTypedGrid1CodeBlock1">
+                <pre id="codeInputBlock" class="codeInputBlock">
                                               <code id="coderBlock">
                                                  
                                                      <p><span class="importStyle">export </span> <span class="interfaceStyle">interface</span>
@@ -800,554 +738,770 @@
                                                        <p><span class="moduleStyle codeIndent">showProductCode</span>: <span class="booleanStyle">boolean</span></p>
                                                        <p><span class="moduleStyle codeIndent">currentProduct</span>: <span class="folderStyle">Product</span>;</p>
                                                        <p><span class="moduleStyle codeIndent">products</span>: <span class="folderStyle">Product[]</span>;</p>
-                                                       <p><span class="moduleStyle codeIndent">error</span>:<span class="errorStyle">string</span>;</p>
+                                                       <p><span class="moduleStyle codeIndent">error</span>: <span class="errorStyle">string</span>;</p>
                                                        <p>{</p>
                                               </code>
                                           </pre>
-                  <div class="codefileInfo">
-                    <span class="folderStyle">app</span> >
-                    <span class="folderStyle">products</span> >
-                    <span class="folderStyle">state</span> >
-                    <span class="filename">product.reducer.ts</span>
-                  </div>
+                <div class="codefileInfo">
+                  <span class="folderStyle">app</span> >
+                  <span class="folderStyle">products</span> >
+                  <span class="folderStyle">state</span> >
+                  <span class="filename">product.reducer.ts</span>
                 </div>
               </div>
-             
-
-              
-              
-              <p>AppState operates similarly to lazy loading with the router. As you only load what state is critical for the app to function
-                and then state slice corresponding to the feature is added and loaded when the feature is loaded.</p>
             </div>
+
+
+
+
+            <p>AppState operates similarly to lazy loading with the router. As you only load what state is critical for
+              the app to function
+              and then state slice corresponding to the feature is added and loaded when the feature is loaded.</p>
           </div>
-        </section>
-        <section id="creatingFeatureSelectors" class="infoChapter">
-          <div class="sectionContainer">
-            <div class="chapterHeading">
-              <h3>Creating Selectors</h3>
-            </div>
-            <div class="chapterContent">
-                <p>Also declared in the feature reducer file are the selectors. The selectors are pure functions that are defined in the reducer.ts
-                    file and used by the components and services to listen to the state and convey any changes to all subscribed parties. In
-                    this example we are defining selectors that will access the state values for the username, currentUser, or whether the user
-                    is authenticated. This can be very helpful because you can monitor the user's authentication and control the user's access
-                    across the entire site through the immutable state. In the code below a feature selector is created and all the selectors are
-                    attached, almost as if you are creating a domain in which the selectors can be found.</p>
+        </div>
+      </section>
+      <section id="creatingFeatureSelectors" class="infoChapter">
+        <div class="sectionContainer">
+          <div class="chapterHeading">
+            <h3>Creating Selectors</h3>
+          </div>
+          <div class="chapterContent">
+            <p>Also declared in the feature reducer file are the selectors. The selectors are pure functions that are
+              defined in the reducer.ts
+              file and used by the components and services to listen to the state and convey any changes to all
+              subscribed parties. In
+              this example we are defining selectors that will access the state values for the username, currentUser, or
+              whether the user
+              is authenticated. This can be very helpful because you can monitor the user's authentication and control
+              the user's access
+              across the entire site through the immutable state. In the code below a feature selector is created and
+              all the selectors are
+              attached, almost as if you are creating a domain in which the selectors can be found.</p>
 
-                    <div class="creatingSelectorsCodeBlock1">
-                        <pre
-                          id="codeInputBlock"
-                          class="codeInputBlock"
-                        >                                               
+            <div class="creatingSelectorsCodeBlock1">
+              <pre id="codeInputBlock" class="codeInputBlock">
                                                     <code id="coderBlock">
                                                        
                                                         <p><span class="interfaceStyle">const </span><span class="moduleStyle">getProductFeatureState =</span></p>
-                                                        <p><span class="decoratorStyle codeIndent">createFeatureSelector</span><span class="folderStyle"></span><span class="fileStyle"></span></p>
+                                                        <p><span class="decoratorStyle codeIndent">createFeatureSelector</span><<span class="folderStyle">ProductState</span>>(<span class="fileStyle">`users`</span>);</p>
                                                         <br>
-                                                        <p><span class="importStyle">export</span><span class="interfaceStyle">const</span><span class="moduleStyle">getIsUserAuthenticated</span><span class="decoratorStyle">createSelector</span> (</p>
-                                                        <p><span class="moduleStyle">getProductFeatureState</span>,</p>
-                                                        <p><span class="moduleStyle">state => state.isAuthenticated</span>);</p>
+                                                        <p><span class="importStyle">export </span><span class="interfaceStyle">const </span><span class="moduleStyle">getIsUserAuthenticated</span>.<span class="decoratorStyle">createSelector</span> (</p>
+                                                        <p><span class="moduleStyle codeIndent">getProductFeatureState</span>,</p>
+                                                        <p><span class="moduleStyle codeIndent">state => state.isAuthenticated</span>);</p>
                                                         <br>
-                                                        <p><span class="importStyle">export</span><span class="interfaceStyle">const</span><span class="moduleStyle">getCurrentUser</span><span class="decoratorStyle">createSelector</span> (</p>
-                                                        <p><span class="moduleStyle">getProductFeatureState</span>,</p>
-                                                        <p><span class="moduleStyle">state => state.currentUser</span>);</p>
+                                                        <p><span class="importStyle">export </span><span class="interfaceStyle">const </span><span class="moduleStyle">getCurrentUser</span>.<span class="decoratorStyle">createSelector</span> (</p>
+                                                        <p><span class="moduleStyle codeIndent">getProductFeatureState</span>,</p>
+                                                        <p><span class="moduleStyle codeIndent">state => state.currentUser</span>);</p>
                                                         <br>
-                                                        <p><span class="importStyle">export</span><span class="interfaceStyle">const</span><span class="moduleStyle">getMaskUserName</span><span class="decoratorStyle">createSelector</span> (</p>
-                                                        <p><span class="moduleStyle">getProductFeatureState</span>,</p>
-                                                        <p><span class="moduleStyle">state => state.maskUserName</span>);</p>
+                                                        <p><span class="importStyle">export </span><span class="interfaceStyle">const </span><span class="moduleStyle">getMaskUserName</span>.<span class="decoratorStyle">createSelector</span> (</p>
+                                                        <p><span class="moduleStyle codeIndent">getProductFeatureState</span>,</p>
+                                                        <p><span class="moduleStyle codeIndent">state => state.maskUserName</span>);</p>
         
                                                     </code>
                                                 </pre>
-                        <div class="codefileInfo">
-                          <span class="folderStyle">app</span> >
-                          <span class="folderStyle">user</span> >
-                          <span class="folderStyle">state</span> >
-                          <span class="filename">user.reducer.ts</span>
-                        </div>
-                      
-                    </div>
-
-                    <p>If the status of the user's authentication changes at any time the store is updated via NgRx actions and immediately all
-                        subscribed parties are notified. The process for changing the store's data begins with NgRx actions.</p>
+              <div class="codefileInfo">
+                <span class="folderStyle">app</span> >
+                <span class="folderStyle">user</span> >
+                <span class="folderStyle">state</span> >
+                <span class="filename">user.reducer.ts</span>
+              </div>
 
             </div>
+
+            <p>If the status of the user's authentication changes at any time the store is updated via NgRx actions and
+              immediately all
+              subscribed parties are notified. The process for changing the store's data begins with NgRx actions.</p>
+
           </div>
-        </section>
-        <section id="actions" class="infoChapter">
-          <div class="sectionContainer">
-            <div class="chapterHeading">
-              <h3>Actions</h3>
+        </div>
+      </section>
+      <section id="actions" class="infoChapter">
+        <div class="sectionContainer">
+          <div class="chapterHeading">
+            <h3>Actions</h3>
+          </div>
+          <div class="chapterContent">
+            <h4>Overview</h4>
+
+            <p>Actions parcel up information that is used to add to or modify the stored data in our store. This app
+              state data is
+              created by user events in the views. The action operates as a discreet mechanism to transport changes in
+              app state data
+              from the components to be the reducer. Once the information is in the reducer it is processed through a
+              switch
+              statement and modifications to the store will be applied. The NgRx Action is not just the critical path in
+              change control
+              of the app state but the only path to state manipulation. This insures the state integrity across the
+              entire application.</p>
+
+            <h4>How and when do I create Actions?</h4>
+
+            <p>Actions are created based upon how the store's data will be modified. Actions are declared along side the
+              state
+              properties because they define how the values of the state properties can be changed. Actions are
+              generally defined in
+              their own file and exported so that they can be accessed from the components and anywhere the feature
+              module is
+              imported.</p>
+
+            <p>An Action is a simple JavaScript object consisting of two properties, the type and the payload.</p>
+
+            <p>Type: is a unique string describing what the action does, what information the action is responsible for
+              manipulating
+              Payload: is the object that carries the change of state.</p>
+
+            <p>This is an example of a basic action:</p>
+
+            <div class="actionsCodeBlock1">
+
+              <div class="codeBlock">
+                <pre class="codeInputBlock">
+
+                                                <code id="coderBlock">                                                   
+                                                  <p>{</p>
+                                                    <div class="codeIndent">
+                                                      <p class="propertyStyle">type: <span class="fileStyle">'LOGIN'</span>,</p>
+                                                      <p class="propertyStyle">payload:  {</p>
+                                                      <p class="propertyStyle codeIndent"><span class="moduleStyle codeIndent">userName: </span><span class="fileStyle">`BobbyBooShay3000`</span>,</p>
+                                                      <p class="propertyStyle codeIndent"><span class="moduleStyle codeIndent">password: </span><span class="fileStyle">`secret`</span>,</p>
+                                                    
+                                                    </div>
+                                                    
+                                                    <p>}</p>    
+      
+                                                
+                                                </code>
+                                  </pre>
+
+
+              </div>
             </div>
-            <div class="chapterContent">
-                <h4>Overview</h4>
+            <p>Actions are recognized by the reducer via the type property in a switch statement. Hence the requirement
+              for them to be unique. It is best
+              practice to define your type properties via enum, so that you define them once and you can bypass any
+              problems with typos that can occur. This
+              enum listing will function as an index and action definition listing (or what i like to refer to as an
+              action dictionary). Declaration type via enum
+              immediately transforms this fragile process into a strongly typed dependable process. </p>
 
-                <p>Actions parcel up information that is used to add to or modify the stored data in our store. This app state data is
-                    created by user events in the views. The action operates as a discreet mechanism to transport changes in app state data
-                    from the components to be the reducer. Once the information is in the reducer it is processed through a switch
-                    statement and modifications to the store will be applied. The NgRx Action is not just the critical path in change control
-                    of the app state but the only path to state manipulation. This insures the state integrity across the entire application.</p>
-
-                    <h4>How and When Do I Create Actions</h4>
-
-                    <p>Actions are created based upon how the store's data will be modified. Actions are declared along side the state
-                        properties because they define how the values of the state properties can be changed. Actions are generally defined in
-                        their own file and exported so that they can be accessed from the components and anywhere the feature module is
-                        imported.</p>
-
-                    <p>An Action is a simple JavaScript object consisting of two properties, the type and the payload.</p>
-
-                    <p>Type: is a unique string describing what the action does, what information the action is responsible for manipulating
-                        Payload: is the object that carries the change of state.</p>
-
-                    <p>This is an example of a basic action:</p>
-                        <p>
-                            {
-                            }
-                            type: 'LOGIN',
-                            payload: {
-                            username; 'apexBugFinder',
-                            password: 'secret'
-                        </p>
-                        <p>Actions are recognized by the reducer via the type property in a switch statement. Hence the requirement for them to be unique. It is best
-                            practice to define your type properties via enum, so that you define them once and you can bypass any problems with typos that can occur. This
-                            enum listing will function as an index and action definition listing (or what i like to refer to as an action dictionary). Declaration type via enum
-                            immediately transforms this fragile process into a strongly typed dependable process. </p>
-
-                            <div class="actionsCodeBlock1">
-                                <pre
-                                  id="codeInputBlock"
-                                  class="codeInputBlock"
-                                >                                               
-                                                            <code id="coderBlock">
-                                                               
-                                                                   <p><span class="importStyle">export</span> interface <span class="folderStyle">State</span> {</p>
-                                                                     <br>
-                                                                     <p>}</p>
-                
-                                                            </code>
+            <div class="actionsCodeBlock1">
+              <pre id="codeInputBlock" class="codeInputBlock">
+                                <code id="coderBlock">
+                                   <p><span class="importStyle">export </span><span class="interfaceStyle">enum </span><span class="folderStyle">ProductActionTypes</span> {</p> 
+                                    <p><span class="moduleStyle codeIndent">ToggleProduceCode</span> = <span class="fileStyle">`[Product] Toggle Product Code`</span>,</p>
+                                    <p><span class="moduleStyle codeIndent">SetCurrentProduct </span> = <span class="fileStyle">`[Product] Set Current Product`</span>,</p>   
+                                    <p><span class="moduleStyle codeIndent">ClearCurrentProduct </span> = <span class="fileStyle">`[Product] Clear Current Product`</span></p>                   
+                                    <p>}</p>
+                                 
+                                    
+                                    
+                                 
+                              </code>
                                                         </pre>
-                                <div class="codefileInfo">
-                                  <span class="folderStyle">app</span> >
-                                  <span class="folderStyle">state</span> >
-                                  <span class="filename">app.state.ts</span>
-                                </div>
-                              
-                            </div>
-
-                            <p>As we are building Typescript we can protect our State but strongly typing our payload to add another layer of protection to the integrity of our
-                                state data. Allowing for an error to be thrown if the data being passed does not match the defined type for that payload.</p>
-
-                                <h3>IMAGE</h3>
-
-                                <div class="actionsCodeBlock2">
-                                    <pre
-                                      id="codeInputBlock"
-                                      class="codeInputBlock"
-                                    >                                               
-                                                                <code id="coderBlock">
-                                                                   
-                                                                       <p><span class="importStyle">export</span> interface <span class="folderStyle">State</span> {</p>
-                                                                         <br>
-                                                                         <p>}</p>
-                    
-                                                                </code>
-                                                            </pre>
-                                    <div class="codefileInfo">
-                                      <span class="folderStyle">app</span> >
-                                      <span class="folderStyle">state</span> >
-                                      <span class="filename">app.state.ts</span>
-                                    </div>
-                                  
-                                </div>
-
-                                <p>As we are building Typescript we can protect our State but strongly typing our payload to add another layer of protection to the integrity of our
-                                    state data. Allowing for an error to be thrown if the data being passed does not match the defined type for that payload.</p>
-
-                                <p>Once our Type definitions and actions have been defined we then can export them as a union type. The naming convention is that you use the</p>
-
-                                <div class="actionsCodeBlock3">
-                                    <pre
-                                      id="codeInputBlock"
-                                      class="codeInputBlock"
-                                    >                                               
-                                                                <code id="coderBlock">
-                                                                   
-                                                                       <p><span class="importStyle">export</span> interface <span class="folderStyle">State</span> {</p>
-                                                                         <br>
-                                                                         <p>}</p>
-                    
-                                                                </code>
-                                                            </pre>
-                                    <div class="codefileInfo">
-                                      <span class="folderStyle">app</span> >
-                                      <span class="folderStyle">state</span> >
-                                      <span class="filename">app.state.ts</span>
-                                    </div>
-                                  
-                                </div>
+              <div class="codefileInfo">
+                <span class="folderStyle">app</span> >
+                <span class="folderStyle">products</span> >
+                <span class="folderStyle">state</span> >
+                <span class="filename">product.actions.ts</span>
+              </div>
 
             </div>
+
+            <p>As we are building Typescript we can protect our State but strongly typing our payload to add another
+              layer of protection to the integrity of our
+              state data. Allowing for an error to be thrown if the data being passed does not match the defined type
+              for that payload.</p>
+
+
+            <img src="./images/productActions.png" alt="" class="actionsImg1">
+
+
+            <div class="actionsCodeBlock2">
+              <pre id="codeInputBlock" class="codeInputBlock">
+                                                                <code id="coderBlock">
+                                                                   
+                                                                       <p><span class="importStyle">export </span>
+                                                                          <span class="interfaceStyle">class </span>
+                                                                          <span class="folderStyle">ToggleProductCode </span>
+                                                                          <span class="interfaceStyle">implements </span>
+                                                                          <span class="folderStyle">Action </span> {</p>
+                                                                        <p><span class="interfaceStyle codeIndent">readonly </span>
+                                                                           <span class="moduleStyle">type = ProductActionTypes.ToggleProductCode</span>;</p>
+                                                                        <p>
+                                                                          <span class="codeIndent">constructor</span>(
+                                                                         
+                                                                            <span class="interfaceStyle">public </span>
+                                                                            <span class="moduleStyle">payload: </span>
+                                                                            <span class="folderStyle">boolean</span>) {}</p>
+                                                                        <p>}</p>
+                                                                          <br>
+                                                                                                                                           
+                                                                        <p><span class="importStyle">export </span>
+                                                                          <span class="interfaceStyle">class </span>
+                                                                          <span class="folderStyle">SetCurrentProduct </span>
+                                                                          <span class="interfaceStyle">implements </span>
+                                                                          <span class="folderStyle">Action </span> {</p>
+                                                                        <p><span class="interfaceStyle codeIndent">readonly </span>
+                                                                           <span class="moduleStyle">type = ProductActionTypes.SetCurrentProduct</span>;</p>
+                                                                        <p>
+                                                                          <span class="codeIndent">constructor</span>(
+                                                                          
+                                                                            <span class="interfaceStyle">public </span>
+                                                                            <span class="moduleStyle">payload: </span>
+                                                                            <span class="folderStyle">Product</span>) {}</p>
+                                                                        <p>}</p>
+                                                                        <br>
+                                                                                                                                           
+                                                                                                                                           
+                                                                        <p><span class="importStyle">export </span>
+                                                                          <span class="interfaceStyle">class </span>
+                                                                          <span class="folderStyle">ClearCurrentProduct </span>
+                                                                          <span class="interfaceStyle">implements </span>
+                                                                          <span class="folderStyle">Action </span> {</p>
+                                                                        <p><span class="interfaceStyle codeIndent">readonly </span>
+                                                                           <span class="moduleStyle">type = ProductActionTypes.SetCurrentProduct</span>;</p>
+                                                                        <p>}</p>
+                                                                      
+                                                                </code>
+                                                            </pre>
+              <div class="codefileInfo">
+                <span class="folderStyle">app</span> >
+                <span class="folderStyle">products</span> >
+                <span class="folderStyle">state</span> >
+                <span class="filename">product.actions.ts</span>
+              </div>
+
+            </div>
+
+            <p>The enums definition is also used in the declaration of the action, so that every instantiation of the
+              action will include
+              the correct and same definition of the action. This allows the reducer to accurately identity each action
+              everytime.
+            </p>
+
+            <p>Once our Type definitions and actions have been defined we then can export them as a union type.</p>
+
+            <div class="actionsCodeBlock3">
+              <pre id="codeInputBlock" class="codeInputBlock">
+                                                                <code id="coderBlock">
+                                                                   
+                                                                       <p><span class="importStyle">export </span><span class="interfaceStyle">type </span><span class="folderStyle">ProductActions </span> = </p>
+                                                                       <p><span class="moduleStyle codeIndent">ToggleProductCode </span>= </p>
+                                                                       <p><span class="moduleStyle codeIndent">| SetCurrentProduct </span>= </p>
+                                                                       <p><span class="moduleStyle codeIndent">| ClearCurrentProduct </span></p>
+                                                                       <p>;</p>
+                    
+                                                                </code>
+                                                            </pre>
+              <div class="codefileInfo">
+                <span class="folderStyle">app</span> >
+                <span class="folderStyle">products</span> >
+                <span class="folderStyle">state</span> >
+                <span class="filename">product.actions.ts</span>
+              </div>
+
+            </div>
+
           </div>
-        </section>
-        <section id="dispatchingActions" class="infoChapter">
-          <div class="sectionContainer">
-            <div class="chapterHeading">
-              <h3>Dispatching Actions</h3>
-            </div>
-            <div class="chapterContent">
-                <p>Now that we have actions defined we can now dispatch them in the components with ease and with very little amount of code needed.</p>
+        </div>
+      </section>
+      <section id="dispatchingActions" class="infoChapter">
+        <div class="sectionContainer">
+          <div class="chapterHeading">
+            <h3>Dispatching Actions</h3>
+          </div>
+          <div class="chapterContent">
+            <p>Now that we have actions defined we can now dispatch them in the components with ease and with very
+              little amount of code needed.</p>
 
-                <div class="dispatchingActionsCodeBlock1">
-                    <pre
-                      id="codeInputBlock"
-                      class="codeInputBlock"
-                    >                                               
+            <div class="dispatchingActionsCodeBlock1">
+              <pre id="codeInputBlock" class="codeInputBlock">
                                                 <code id="coderBlock">
                                                    
-                                                       <p><span class="importStyle">export</span> interface <span class="folderStyle">State</span> {</p>
-                                                         <br>
-                                                         <p>}</p>
-    
+                                                  <p><span class="decoratorStyle">checkChanged</span>(<span class="moduleStyle">value</span>: <span class="folderStyle">boolean</span>): <span class="folderStyle">void </span> {</p>
+                                                    <p><span class="interfaceStyle">this</span>.<span class="moduleStyle">store</span>.<span class="decoratorStyle">dispatch</span>(</p>
+                                                    <p><span class="interfaceStyle codeIndent">new</span><span class="folderStyle">productActions.ToggleProductCode</span>(<span class="moduleStyle">value</span>));</p>
+                                                    <p>}</p>
+                                                    <br>
+
+                                                    <p><span class="decoratorStyle">newProduct</span>(<span class="moduleStyle">product</span>: <span class="folderStyle">Product</span>): <span class="folderStyle">void </span> {</p>
+                                                      <p><span class="interfaceStyle">this</span>.<span class="moduleStyle">store</span>.<span class="decoratorStyle">dispatch</span>(</p>
+                                                      <p><span class="interfaceStyle codeIndent">new</span><span class="folderStyle">productActions.InitializeCurrentProduct</span>(<span class="moduleStyle"></span>));</p>
+                                                      <p>}</p>
+                                                      <br>
+
+                                                      <p><span class="decoratorStyle">productSelected</span>(<span class="moduleStyle">product</span>: <span class="folderStyle">Product</span>): <span class="folderStyle">void </span> {</p>
+                                                        <p><span class="interfaceStyle">this</span>.<span class="moduleStyle">store</span>.<span class="decoratorStyle">dispatch</span>(</p>
+                                                        <p><span class="interfaceStyle codeIndent">new</span><span class="folderStyle">productActions.SetCurrentProduct</span>(<span class="moduleStyle">product</span>));</p>
+                                                        <p>}</p>
                                                 </code>
                                             </pre>
-                    <div class="codefileInfo">
-                      <span class="folderStyle">app</span> >
-                      <span class="folderStyle">state</span> >
-                      <span class="filename">app.state.ts</span>
-                    </div>
-                  
-                </div>
+              <div class="codefileInfo">
+                <span class="folderStyle">app</span> >
+                <span class="folderStyle">product</span> >
+                <span class="folderStyle">product-shell</span> >
+                <span class="filename">product-shell.component.ts</span>
+              </div>
+
             </div>
           </div>
-        </section>
-        <section id="reducers" class="infoChapter">
-          <div class="sectionContainer">
-            <div class="chapterHeading">
-              <h3>Reducers</h3>
-            </div>
-            <div class="chapterContent">
-                <p>Reducers sole function is to specify how the state / immutable Store changes in response to an Action. The reducer's job is to listen for all
-                    actions and then when it recognizes an action it performs a particular task that usually involves updating the immutable Store.</p>
-            
-                <p>A every feature has it's own state folder and corresponding reducer.ts file. In the reducer file you can find the definition of the State name, the
-                    selectors and the reducer itself, which is the definition of how the actions affect state. The reducer definition is a switch statement that lists the
-                    response to every defined action.</p>
-
-               <p>Example of a reducer.ts file:</p>
-               
-               <div class="reducersCodeBlock1">
-                <pre
-                  id="codeInputBlock"
-                  class="codeInputBlock"
-                >                                               
-                                            <code id="coderBlock">
-                                               
-                                                   <p><span class="importStyle">export</span> interface <span class="folderStyle">State</span> {</p>
-                                                     <br>
-                                                     <p>}</p>
-
-                                            </code>
-                                        </pre>
-                <div class="codefileInfo">
-                  <span class="folderStyle">app</span> >
-                  <span class="folderStyle">state</span> >
-                  <span class="filename">app.state.ts</span>
-                </div>
-              
-            </div>
-
-            <div class="dispatchingActionsCodeBlock2">
-                <pre
-                  id="codeInputBlock"
-                  class="codeInputBlock"
-                >                                               
-                                            <code id="coderBlock">
-                                               
-                                                   <p><span class="importStyle">export</span> interface <span class="folderStyle">State</span> {</p>
-                                                     <br>
-                                                     <p>}</p>
-
-                                            </code>
-                                        </pre>
-                <div class="codefileInfo">
-                  <span class="folderStyle">app</span> >
-                  <span class="folderStyle">state</span> >
-                  <span class="filename">app.state.ts</span>
-                </div>
-              
-            </div>
-            
-            </div>
+        </div>
+      </section>
+      <section id="reducers" class="infoChapter">
+        <div class="sectionContainer">
+          <div class="chapterHeading">
+            <h3>Reducers</h3>
           </div>
-        </section>
-        <section id="utilizingFeatureSelectors" class="infoChapter">
-          <div class="sectionContainer">
-            <div class="chapterHeading">
-              <h3>Utilizing Feature Selectors</h3>
+          <div class="chapterContent">
+            <p>Reducers sole function is to specify how the state / immutable Store changes in response to an Action.
+              The reducer's job is to listen for all
+              actions and then when it recognizes an action it performs a particular task that usually involves updating
+              the immutable Store.</p>
+
+            <p>A every feature has it's own state folder and corresponding reducer.ts file. In the reducer file you can
+              find the definition of the State name, the
+              selectors and the reducer itself, which is the definition of how the actions affect state. The reducer
+              definition is a switch statement that lists the
+              response to every defined action.</p>
+
+            <p>Example of a reducer.ts file:</p>
+
+            <div class="reducersCodeBlock1">
+              <pre id="codeInputBlock" class="codeInputBlock">
+                                            <code id="coderBlock">
+                                               
+                                              <p><span class="importStyle">export </span><span class="interfaceStyle">function </span><span class="decoratorStyle">reducer </span> (</p>
+                                              <p><span class="moduleStyle codeIndent">state</span>: <span class="folderStyle">ProductState </span>= <span class="moduleStyle">initialState</span>,</p>     
+                                              <p><span class="moduleStyle codeIndent">action</span>: <span class="folderStyle">ProductActions </span>): <span class="folderStyle">ProductState </span> {</p>
+                                                <br>
+
+                                              <p><span class="importStyle">switch </span>(<span class="moduleStyle">action.type</span>) {</p>
+                                              <br>
+                                              
+                                              <p><span class="importStyle">case </span><span class="moduleStyle">ProductActionTypes.ToggleProductCode</span>: </p>
+                                              <p><span class="importStyle">return </span>{</p>
+                                              <p><span class="moduleStyle codeIndent">...state</span>,</p>
+                                              <p><span class="moduleStyle codeIndent">showProductCode</span>.<span class="moduleStyle">action</span>.<span class="moduleStyle">payload</span></p>
+                                              <p>},</p>
+                                              <br>
+
+                                              <p><span class="importStyle">case </span><span class="moduleStyle">ProductActionTypes.SetCurrentProduct</span>: </p>
+                                                <p><span class="importStyle">return </span>{</p>
+                                                <p><span class="moduleStyle codeIndent">...state</span>,</p>
+                                                <p><span class="moduleStyle codeIndent">currentProduct</span>: { ...<span class="moduleStyle">action</span>.<span class="moduleStyle">payload </span> }</p>
+                                                <p>},</p>
+                                                <br>
+
+                                                <p><span class="importStyle">case </span><span class="moduleStyle">ProductActionTypes.InitializeCurrentProduct</span>: </p>
+                                                <p><span class="importStyle">return </span>{</p>
+                                                <p><span class="moduleStyle codeIndent">...state</span>,</p>
+                                                <p><span class="moduleStyle codeIndent">currentProduct</span>: { </p>
+                                                  <div class="reducerCodeBlockIndent">
+                                                    <p class="codeIndent"><span class="codeIndent moduleStyle">Id: 0</span>,</p>
+                                                    <p class="codeIndent"><span class="codeIndent moduleStyle">productName: </span><span class="fileStyle">' '</span>,</p>
+                                                    <p class="codeIndent"><span class="codeIndent moduleStyle">productCode: </span><span class="fileStyle">'New'</span></p>
+                                                    <p class="codeIndent"><span class="codeIndent moduleStyle">description:</span><span class="fileStyle">' '</span>,</p>
+                                                    <p>}</p>
+                                                  </div>
+                                                
+                                                  <p>};</p>
+                                                  <p>...</p>
+                                            </code>
+                                        </pre>
+              <div class="codefileInfo">
+                <span class="folderStyle">app</span> >
+                <span class="folderStyle">product</span> >
+                <span class="folderStyle">state</span> >
+                <span class="filename">product.reducer.ts</span>
+              </div>
+
             </div>
-            <div class="chapterContent">
-                <p>Now that we have a working reducer, and actions conveying changes to the reducer, we still need to coordinate these changes to all interested
-                    parties across the application simultaneously by utilization of the feature selectors. The selectors are programmed to listen to specific properties (a
-                    slice) of the state, and when those values are updated the changes are passed to all the subscribed parties across the application. Please see
-                    Creating Feature Selector section for more details on defining a feature selector.</p>
 
-                <p>In the component we import the Store and select operators from the @ngrx/store, and all the exports in the reducer.ts file from the feature module
-                        concerning the portion of the slice you are interested in. By importing the exports in the feature module reducer.ts file you will gain access to the
-                        selectors.</p>
 
-                        <div class="utilizingFeatureSelectorsCodeBlock1">
-                            <pre
-                              id="codeInputBlock"
-                              class="codeInputBlock"
-                            >                                               
+
+          </div>
+        </div>
+      </section>
+      <section id="utilizingFeatureSelectors" class="infoChapter">
+        <div class="sectionContainer">
+          <div class="chapterHeading">
+            <h3>Utilizing Feature Selectors</h3>
+          </div>
+          <div class="chapterContent">
+            <p>Now that we have a working reducer, and actions conveying changes to the reducer, we still need to
+              coordinate these changes to all interested
+              parties across the application simultaneously by utilization of the feature selectors. The selectors are
+              programmed to listen to specific properties (a
+              slice) of the state, and when those values are updated the changes are passed to all the subscribed
+              parties across the application. Please see
+              Creating Feature Selector section for more details on defining a feature selector.</p>
+
+            <p>In the component we import the Store and select operators from the @ngrx/store, and all the exports in
+              the reducer.ts file from the feature module
+              concerning the portion of the slice you are interested in. By importing the exports in the feature module
+              reducer.ts file you will gain access to the
+              selectors.</p>
+
+            <div class="utilizingFeatureSelectorsCodeBlock1">
+              <pre id="codeInputBlock" class="codeInputBlock">
                                                         <code id="coderBlock">
-                                                           
-                                                               <p><span class="importStyle">export</span> interface <span class="folderStyle">State</span> {</p>
-                                                                 <br>
-                                                                 <p>}</p>
+                                                           <p><span class="importStyle">import </span>{<span class="moduleStyle">Store, select </span>} <span class="importStyle">from </span><span class="fileStyle">`@ngrx/store`</span>;</p>
+                                                           <p><span class="importStyle">import </span><span class="moduleStyle">* as fromProduct </span><span class="importStyle">from </span><span class="fileStyle">`.../state/product.reducer`</span>;</p>
             
                                                         </code>
                                                     </pre>
-                            <div class="codefileInfo">
-                              <span class="folderStyle">app</span> >
-                              <span class="folderStyle">state</span> >
-                              <span class="filename">app.state.ts</span>
-                            </div>
-                          
-                        </div>
+              <div class="codefileInfo">
+                <span class="folderStyle">app</span> >
+                <span class="folderStyle">products</span> >
+                <span class="folderStyle">product-list</span> >
+                <span class="filename">product-list.component.ts</span>
+              </div>
 
-                        <p>Declaration of the necessary local variables needed to handle the subscription to the selectors. The selectors are actually Observables so in some
-                            cases you can declare just an Observable or strongly typed Observable<>. In other cases if you need to process the value in the component before
-                            exposing it to the user you might want to declare a strongly typed Observable (Observable<TYPE>) and a variable of that type to access the data
-                            (SelectorData: TYPE).</p>
+            </div>
 
-                            <div class="utilizingFeatureSelectorsCodeBlock2">
-                                <pre
-                                  id="codeInputBlock"
-                                  class="codeInputBlock"
-                                >                                               
+            <p>Declaration of the necessary local variables is needed to handle the subscription to the selectors. The
+              selectors are actually Observables so in some
+              cases you can declare just an Observable or strongly typed Observable<>. In the case when you need to
+                process the value in the component before
+                exposing it to the user, you will declare a strongly typed <span class="folderStyle">Observable</span>
+                <<span class="moduleStyle">TYPE</span>> and a
+                  correpsonding variable of that type to access the data
+                  (SelectorData: TYPE) that is piped in from the subscription.</p>
+
+            <div class="utilizingFeatureSelectorsCodeBlock2">
+              <pre id="codeInputBlock" class="codeInputBlock">
                                                             <code id="coderBlock">
-                                                               
-                                                                   <p><span class="importStyle">export</span> interface <span class="folderStyle">State</span> {</p>
-                                                                     <br>
-                                                                     <p>}</p>
-                
+                                                                <p><span class="decoratorStyle">@Component</span> ( {</p>
+                                                                <p><span class="moduleStyle">selector</span>: <span class="fileStyle">`pm-product-list`</span>,</p>
+                                                                <p><span class="moduleStyle">templateUrl</span>: <span class="fileStyle">`./product-list.component.html`</span>,</p>
+                                                                <p><span class="moduleStyle">environment.production</span>: [<span class="fileStyle">`./product-list.component.css`</span>],</p>
+                                                                   <p>})</p>
+
+                                                                <br>
+
+                                                                <p><span class="importStyle">export </span><span class="moduleStyle">class </span><span class="folderStyle">ProductListComponent </span><span class="moduleStyle">implements </span><span class="decoratorStyle">OnInit </span>[</p>
+                                                                <p class=""><span class="moduleStyle codeIndent">displayCode$</span>: <span class="folderStyle">Observable</span><<span class="booleanStyle">boolean</span>>;</p>
+                                                                <p class=""><span class="moduleStyle codeIndent">displayCode</span>: <span class="booleanStyle">boolean</span>;</p>
+                                                                <p class=""><span class="moduleStyle codeIndent">selectedProduct$</span>: <span class="folderStyle">Observable</span><<span class="folderStyle">Product</span>>;</p>
+                                                                <p class=""><span class="moduleStyle codeIndent">selectedProduct</span>: <span class="folderStyle">Product</span>;</p>
+                                                                <p class=""><span class="moduleStyle codeIndent">products$</span>: <span class="folderStyle">Observable</span><<span class="folderStyle">Product </span>[ ]>;</p>
+                                                                <p class=""><span class="moduleStyle codeIndent">products</span>: <span class="folderStyle"></span>[ ];</p>
+                                                                <p class=""><span class="moduleStyle codeIndent">errorMessage$</span>: <span class="folderStyle">Observable</span><<span class="fileStyle">string</span>>;</p>
+                                                                <p class=""><span class="moduleStyle codeIndent">errorMessage</span>: <span class="fileStyle">string</span>;</p>
+                                                                <p>]</p>
                                                             </code>
                                                         </pre>
-                                <div class="codefileInfo">
-                                  <span class="folderStyle">app</span> >
-                                  <span class="folderStyle">state</span> >
-                                  <span class="filename">app.state.ts</span>
-                                </div>
-                              
-                            </div>
-                            <p>On the initialization of the component in the ngOnInit() method you pipe into the store and pass the observable pertaining to store slice a
-                                local variable. These values in the store can then be exposed directly via an async pipe in the view or can be subscribed to component side
-                                so the data can be manipulated before it is exposed to the user.</p>
-
-                                <div class="utilizingFeatureSelectorsCodeBlock3">
-                                    <pre
-                                      id="codeInputBlock"
-                                      class="codeInputBlock"
-                                    >                                               
-                                                                <code id="coderBlock">
-                                                                   
-                                                                       <p><span class="importStyle">export</span> interface <span class="folderStyle">State</span> {</p>
-                                                                         <br>
-                                                                         <p>}</p>
-                    
-                                                                </code>
-                                                            </pre>
-                                    <div class="codefileInfo">
-                                      <span class="folderStyle">app</span> >
-                                      <span class="folderStyle">state</span> >
-                                      <span class="filename">app.state.ts</span>
-                                    </div>
-                                  
-                                </div>
-                                <div class="utilizingFeatureSelectorsCodeBlock4">
-                                    <pre
-                                      id="codeInputBlock"
-                                      class="codeInputBlock"
-                                    >                                               
-                                                                <code id="coderBlock">
-                                                                   
-                                                                       <p><span class="importStyle">export</span> interface <span class="folderStyle">State</span> {</p>
-                                                                         <br>
-                                                                         <p>}</p>
-                    
-                                                                </code>
-                                                            </pre>
-                                    <div class="codefileInfo">
-                                      <span class="folderStyle">app</span> >
-                                      <span class="folderStyle">state</span> >
-                                      <span class="filename">app.state.ts</span>
-                                    </div>
-                                  
-                                </div>
+              <div class="codefileInfo">
+                <span class="folderStyle">app</span> >
+                <span class="folderStyle">state</span> >
+                <span class="filename">app.state.ts</span>
+              </div>
 
             </div>
+            <p>On the initialization of the component in the ngOnInit() method you pipe into the store and pass the
+              observable pertaining to store slice a
+              local variable. These values in the store can then be exposed directly via an async pipe in the view or
+              can be subscribed to component side
+              so the data can be manipulated before it is exposed to the user.</p>
+
+            <div class="utilizingFeatureSelectorsCodeBlock3">
+              <pre id="codeInputBlock" class="codeInputBlock">
+                                                                <code id="coderBlock">
+                                                                   
+                                                                       <p><span class="decoratorStyle">ngOnInit</span>(): <span class="folderStyle">void </span>{</p>
+                                                                        <p><span class="interfaceStyle codeIndent">this</span>.<span class="moduleStyle">products$ </span>=
+                                                                          <span class="interfaceStyle">this</span>.<span class="moduleStyle">store</span>.<span class="decoratorStyle">pipe</span>(<span class="decoratorStyle">select</span>(<span class="moduleStyle">fromProduct</span>.<span class="moduleStyle">getProducts</span>));
+                                                                        </p>
+                                                                        <br>
+                                                                        <p><span class="interfaceStyle codeIndent">this</span>.<span class="moduleStyle">currentProduct$ </span>=
+                                                                          <span class="interfaceStyle">this</span>.<span class="moduleStyle">store</span>.<span class="decoratorStyle">pipe</span>(<span class="decoratorStyle">select</span>(<span class="moduleStyle">fromProduct</span>.<span class="moduleStyle">getCurrentProduct</span>));
+                                                                        </p>
+                                                                        <br>
+                                                                        <p><span class="interfaceStyle codeIndent">this</span>.<span class="moduleStyle">displayCode$ </span>=
+                                                                          <span class="interfaceStyle">this</span>.<span class="moduleStyle">store</span>.<span class="decoratorStyle">pipe</span>(<span class="decoratorStyle">select</span>(<span class="moduleStyle">fromProduct</span>.<span class="moduleStyle">getShowProductCode</span>));
+                                                                        </p>
+                                                                        <br>
+                                                                        <p><span class="interfaceStyle codeIndent">this</span>.<span class="moduleStyle">errorMessages$ </span>=
+                                                                          <span class="interfaceStyle">this</span>.<span class="moduleStyle">store</span>.<span class="decoratorStyle">pipe</span>(<span class="decoratorStyle">select</span>(<span class="moduleStyle">fromProduct</span>.<span class="moduleStyle">getError</span>));
+                                                                        </p>
+                    
+                                                                        <p>}</p>
+                                                                </code>
+                                                            </pre>
+              <div class="codefileInfo">
+                <span class="folderStyle">app</span> >
+                <span class="folderStyle">products</span> >
+                <span class="folderStyle">product-list</span> >
+                <span class="filename">product-list.component.ts</span>
+              </div>
+
+            </div>
+            <div class="utilizingFeatureSelectorsCodeBlock4">
+              <pre id="codeInputBlock" class="codeInputBlock">
+                                                                <code id="coderBlock">
+                                                                   
+                                                                      <p>&lt<span class="booleanStyle">div </span><span class="moduleStyle">class</span>=<span class="fileStyle">"card-body" </span><span class="moduleStyle">*ngIf</span>=<span class="fileStyle">"products$ | async as products"</span>></p>
+                                                                      <p><span class="codeIndent"></span>&lt<span class="booleanStyle">div </span><span class="moduleStyle">class</span>=<span class="fileStyle">"list-group"</span>></p>
+                                                                      <p><span class="codeIndent"></span><span class="codeIndent"></span>&lt<span class="booleanStyle">button </span><span class="moduleStyle">class</span>=<span class="fileStyle">"list-group-item list-group-item-action rounded-0"</span></p>
+                                                                      <p><span class="codeIndent"></span><span class="codeIndent"></span><span class="codeIndent"></span><span class="moduleStyle">*ngFor</span>=<span class="fileStyle">"let product of products"</span></p>
+                                                                      <p><span class="codeIndent"><span class="codeIndent"></span><span class="codeIndent"></span><span class="moduleStyle">[ngClass]</span>=<span class="fileStyle">"{`active`:product?.id === selectedProduct?.id}"</span></p>
+                                                                      <p><span class="codeIndent"><span class="codeIndent"><span class="codeIndent"></span></span><span class="moduleStyle">(click)</span>=<span class="fileStyle">"productSelected(product)"</span>></p>
+                                                                      <p><span class="codeIndent"></span><span class="codeIndent"></span><span class="codeIndent"></span><span class="codeIndent">{{ product.productName }}</span></p>
+                                                                      <p><span class="codeIndent"></span><span class="codeIndent"></span><span class="codeIndent"></span>&lt<span class="booleanStyle">ng-container </span><span class="moduleStyle">*ngIf</span>=<span class="fileStyle">"displayCode"</span></p>
+                                                                      <p><span class="codeIndent"></span><span class="codeIndent"></span><span class="codeIndent"></span><span class="codeIndent"></span> ({{ product.productCode }})</span></p>
+                                                                      <p><span class="codeIndent"></span><span class="codeIndent"></span><span class="codeIndent">&lt/</span> <span class="booleanStyle">ng-container</span >></p>
+                                                                        <p><span class="codeIndent"><span class="codeIndent">&lt/</span> <span class="booleanStyle">button </span>></p>
+                                                                        <p><span class="codeIndent">&lt/</span><span class="booleanStyle">div</span>&gt</p>
+                                                                        <p>&lt/<span class="booleanStyle">div</span>&gt</p>
+
+                                                                </code>
+                                                            </pre>
+              <div class="codefileInfo">
+                <span class="folderStyle">app</span> >
+                <span class="folderStyle">products</span> >
+                <span class="folderStyle">product-list</span> >
+                <span class="filename">product-list.component.html</span>
+              </div>
+
+            </div>
+
           </div>
-        </section>
-        <section id="effects" class="infoChapter">
-          <div class="sectionContainer">
-            <div class="chapterHeading">
-              <h3>Effects</h3>
-            </div>
-            <div class="chapterContent">
+        </div>
+      </section>
+      <section id="effects" class="infoChapter">
+        <div class="sectionContainer">
+          <div class="chapterHeading">
+            <h3>Effects</h3>
+          </div>
+          <div class="chapterContent">
 
-                <h4>What are NgRx Effects?</h4>
+            <h4>What are NgRx Effects?</h4>
 
-                <p>As the reducer and actions are considered a pure function, they lack the ability to call out to an external source for data. Effects are the
-                    solution to this problem. When an action is called that requires access to an outside data source it will trigger an effect. The effect will
-                    make the subsequent call to the server, retrieve or update data and return and attach any necessary data to an action. This action will then
-                    follow the standard protocol where it is picked up by the reducer and the data if any is processed into the immutable state.</p>
+            <p>As the reducer and actions are considered a pure function, they lack the ability to call out to an
+              external source for data. Effects are the
+              solution to this problem. When an action is called that requires access to an outside data source it will
+              trigger an effect. The effect will
+              make the subsequent call to the server, retrieve or update data and return and attach any necessary data
+              to an action. This action will then
+              follow the standard protocol where it is picked up by the reducer and the data if any is processed into
+              the immutable state.</p>
 
 
-                    <h3>IMG GIFFFF</h3>
+            <img src="./videos/ngrx-effectsGIF.gif" alt="" class="ngRxEffectGif">
 
-                    <h4>Getting Started w/ Effects</h4>
+            <h4>Getting Started w/ Effects</h4>
 
-                    <p>To use NgRx Effects your application will require you to install the NgRx Effects package via npm or yarn. In this example I prefer to use
-                        yarn.</p>
+            <p>To use NgRx Effects your application will require you to install the NgRx Effects package via npm or
+              yarn. In this example I prefer to use yarn.</p>
 
-                    <pre>
-                                   
-                                       
-                        <kbd>npm install @ngrx/effects --save</kbd> 
-                         
-                    
-                    </pre>
+            <div class="terminalCode">
+              <pre>
 
-                    <p>To complete the initialization of the NgRx Effects module you need to import it into the appModule</p>
 
-                    <div class="effectsCodeBlock1">
-                        <pre
-                          id="codeInputBlock"
-                          class="codeInputBlock"
-                        >                                               
-                                                    <code id="coderBlock">
-                                                       
-                                                           <p><span class="importStyle">export</span> interface <span class="folderStyle">State</span> {</p>
-                                                             <br>
-                                                             <p>}</p>
-        
-                                                    </code>
-                                                </pre>
-                        <div class="codefileInfo">
-                          <span class="folderStyle">app</span> >
-                          <span class="folderStyle">state</span> >
-                          <span class="filename">app.state.ts</span>
-                        </div>
-                      
-                    </div>
-
-                    <h4>Implementation</h4>
-
-                    <p>When you create an NgRx effects they are located in an effects file in their respective feature state folder.
-                        The file follows the standard naming convention with the feature in the title... 'feature'.effects.ts. In this example we are using the product
-                        feature module and adding an effect that will get an array of products from the server. It is important to note that at the top of the file we
-                        import Actions, Effect, and ofType from @ngrx/effects. An effect relies on rxjs operators like mergeMap, map, and catchError to manage
-                        the return data from the observables. An Effect also operates similar to a service as it uses the @Injectable() decorator.
-                        After attempting to fetch the data the effect will map and pipe the results and either dispatch a LoadSuccess() Action or a LoadFail() Action.
-                        The LoadSuccess() Action if successful will carry the resultant array of products as the payload. The LoadFail() Action will carry a string
-                        detailing the error.</p>
-
-                        <div class="effectsCodeBlock2">
-                            <pre
-                              id="codeInputBlock"
-                              class="codeInputBlock"
-                            >                                               
-                                                        <code id="coderBlock">
-                                                           
-                                                               <p><span class="importStyle">export</span> interface <span class="folderStyle">State</span> {</p>
-                                                                 <br>
-                                                                 <p>}</p>
-            
-                                                        </code>
-                                                    </pre>
-                            <div class="codefileInfo">
-                              <span class="folderStyle">app</span> >
-                              <span class="folderStyle">state</span> >
-                              <span class="filename">app.state.ts</span>
-                            </div>
-                          
-                        </div>
-
-                        <p>Regardless of whether the Effect is successful The Reducer is waiting patiently to process the resultant actions of the effect.</p>
-
+                            <kbd><span class="decoratorStyle">> </span>npm install @ngrx/effects --save</kbd> 
+                             
                         
+                        </pre>
             </div>
-          </div>
-        </section>
-        <section id="devtools" class="infoChapter">
-          <div class="sectionContainer">
-            <div class="chapterHeading">
-              <h3>Dev Tools</h3>
-            </div>
-            <div class="chapterContent">
 
-                <p>Now that you have your NgRx in full bloom, let us take a look at what Redux in Action with Redux DevTools</p>
-                <p>Let's install Redux DevTools in three easy steps so we can take a look under the hood</p>
 
+            <p>To complete the initialization of the NgRx Effects module you need to import it into the appModule</p>
+
+            <div class="effectsCodeBlock1">
               
-                
-                <ul class="chapterContent-ul-numbered">
-                    <li class="">Install browser extension</li>
-                    <ul class="chapterContent-ul2">
-                        <li class="chapterContent-li">Chrome extension: 'redux devtools</li>
-                        <li class="chapterContent-li">Firefox add-ons: 'redux devtools'</li>
-                    </ul>
-                    <li class="">Install @ngrx/store-devtools</li>
-                    <div class="terminalCode">
-                        <pre>
-                                    
-                                        
-                            <kbd>npm install @ngrx/effects --save</kbd> 
+              <pre id="codeInputBlock" class="codeInputBlock">
+                                            <code id="coderBlock">
+                                               
+                                              <p>...</p>   
+                                              <p> <span class="importStyle">import</span> { <span class="moduleStyle">EffectsModule</span> } from <span class="fileStyle">'@ngrx/effects'</span>;  </p>
+                                             
+                                               <br>         
+                                              <br>
+                                              <p><span class="decoratorStyle">@NgModule</span>({</p>
+                                                  <p>imports: [</p>
+                                                      <div class="codeIndent">
+                                                          <p>...</p> 
+                                                          <p><span class="moduleStyle">EffectsModule</span>.<span class="decoratorStyle">forRoot</span>([ ]),</p> 
+                                                          
+                                                      </div>  
+                                                         
+                                                  ]
+                                              <p>});</p>
+                                             
+
+                                            </code>
+                                        </pre>
+              <div class="codefileInfo">
+                <span class="folderStyle">app</span> >
+                <span class="filename">app.module.ts</span>
+              </div>
+          
+
+          </div>
+
+            <h4>Implementation</h4>
+
+            <p>When you create an NgRx effects they are located in an effects file in their respective feature state
+              folder.
+              The file follows the standard naming convention with the feature in the title... 'feature'.effects.ts. In
+              this example we are using the product
+              feature module and adding an effect that will get an array of products from the server. It is important to
+              note that at the top of the file we
+              import Actions, Effect, and ofType from @ngrx/effects. An effect relies on rxjs operators like mergeMap,
+              map, and catchError to manage
+              the return data from the observables. An Effect also operates similar to a service as it uses the
+              @Injectable() decorator.
+              After attempting to fetch the data the effect will map and pipe the results and either dispatch a
+              LoadSuccess() Action or a LoadFail() Action.
+              The LoadSuccess() Action if successful will carry the resultant array of products as the payload. The
+              LoadFail() Action will carry a string
+              detailing the error.</p>
+
+              <div class="devToolsCodeBlock2">
+              
+                <pre id="codeInputBlock" class="codeInputBlock">
+                                              <code id="coderBlock">
+                                                 
+                                                    
+                                                <p> <span class="importStyle">import</span> { <span class="moduleStyle">Injectable</span> } from <span class="fileStyle">'@angular/core'</span>;  </p>
+                                                <p> <span class="importStyle">import</span> { <span class="moduleStyle">Actions, Effect, ofType</span> } from <span class="fileStyle">'@ngrx/effects'</span>;</p>      
+                                                <p> <span class="importStyle">import</span> { <span class="moduleStyle">ProductService</span> } from <span class="fileStyle">'../product.service'</span>;  </p>      
+                                                <p> <span class="importStyle">import </span><span class="moduleStyle">* </span><span class="importStyle">as </span><span class="moduleStyle">productActions </span><span class="importStyle">from </span><span class="fileStyle">'../state/product.actions'</span>;  </p>      
+                                                 <p><span class="importStyle">import </span>{</p>         
+                                                  <p><span class="codeIndent"></span><span class="moduleStyle">mergeMap, map, catchError</span></p>
+                                                  <p>}<span class="importStyle"> from </span><span class="fileStyle">'rxjs/operators'</span>;</p>
+                                                  <p><span class="importStyle">import</span> { <span class="moduleStyle">Product </span>} <span class="importStyle">from </span><span class="fileStyle">'../product'</span>;</p>
+                                                  <p><span class="importStyle">import</span> { <span class="moduleStyle">of </span>} <span class="importStyle">from </span><span class="fileStyle">'rxjs'</span>;</p>
+                                                  <br><br>
+
+
+                                                <p><span class="decoratorStyle">@Injectable()</span></p>
+                                                    <p><span class="importStyle">export </span><span class="interfaceStyle">class </span><span class="folderStyle">ProductEffects</span> {</p>
+                                                      <p><span class="codeIndent"></span><span class="interfaceStyle">constructor </span>(</p>
+                                                      <p><span class="codeIndent"></span><span class="codeIndent"></span><span class="interfaceStyle">private </span><span class="moduleStyle">action$</span>: <span class="folderStyle">Actions</span>,</p>
+                                                      <p><span class="codeIndent"></span><span class="codeIndent"></span><span class="interfaceStyle">private </span><span class="moduleStyle">productService</span>: <span class="folderStyle">ProductService</span>) { }</p>
+                                                      
+                                                      <br><br>
+                                                      <p><span class="decoratorStyle">@Effect()</span></p>
+                                                      <p><span class="moduleStyle">LoadProducts$ </span>= <span class="interfaceStyle">this</span>.<span class="moduleStyle">actions$</span>.<span class="decoratorStyle">pipe</span>(</p>
+                                                      <p><span class="codeIndent"></span><span class="decoratorStyle">ofType</span>(<span class="moduleStyle">productActions.ProductActionTypes.Load</span>),</p>
+                                                      <p><span class="codeIndent"></span><span class="decoratorStyle">mergeMap</span>( (<span class="interfaceStyle">action</span>: <span class="folderStyle">productActions.Load</span>) =></p>
+                                                      <p><span class="codeIndent"></span><span class="codeIndent"></span><span class="interfaceStyle">this</span>.<span class="moduleStyle">productService</span>.<span class="decoratorStyle">getProducts</span>()</p>
+                                                      <p><span class="codeIndent"></span><span class="codeIndent"></span>.<span class="decoratorStyle">pipe</span>(</p>
+                                                      <p><span class="codeIndent"></span><span class="codeIndent"></span><span class="codeIndent"></span><span class="decoratorStyle">map</span>((<span class="moduleStyle">products</span>: <span class="folderStyle">Product</span> [ ]) =></p>
+                                                      <p><span class="codeIndent"></span><span class="codeIndent"></span><span class="codeIndent"></span>(<span class="interfaceStyle">new </span><span class="folderStyle">productActions.LoadSuccess</span>(<span class="moduleStyle">products</span>)))</p>
+                                                      <p><span class="codeIndent"></span><span class="codeIndent"></span><span class="codeIndent"></span><span class="decoratorStyle">catchError</span>(<span class="moduleStyle">err</span> => <span class="decoratorStyle">of </span><span class="interfaceStyle">new </span><span class="folderStyle">productActions.LoadFail</span>(<span class="moduleStyle">err</span>)))</p>
+                                                      <p><span class="codeIndent"></span><span class="codeIndent">)</span></p>
+                                                      <p><span class="codeIndent">)</span></p>
+                                                      <p>);</p>
+                                                      <p>}</p>
+
+                                              </code>
+                                          </pre>
+                <div class="codefileInfo">
+                  <span class="folderStyle">app</span> >
+                  <span class="folderStyle">users</span> >
+                  <span class="filename">user.module.ts</span>
+                </div>
+            
+
+            </div>
+
+            <p>Regardless of whether the Effect is successful The Reducer is waiting patiently to process the resultant
+              actions of the effect.</p>
+
+
+          </div>
+        </div>
+      </section>
+      <section id="devtools" class="infoChapter">
+        <div class="sectionContainer">
+          <div class="chapterHeading">
+            <h3>Dev Tools</h3>
+          </div>
+          <div class="chapterContent">
+
+            <p>Now that you have your NgRx in full bloom, let us take a look at what Redux in Action with Redux DevTools
+            </p>
+            <p>Let's install Redux DevTools in three easy steps so we can take a look under the hood</p>
+
+
+
+            <ul class="chapterContent-ul-numbered">
+              <li class="">Install browser extension</li>
+              <ul class="chapterContent-ul2">
+                <li class="chapterContent-li">Chrome extension: 'redux devtools</li>
+                <li class="chapterContent-li">Firefox add-ons: 'redux devtools'</li>
+              </ul>
+              <li class="">Install @ngrx/store-devtools</li>
+              <div class="terminalCode">
+                <pre>
+
+
+                            <kbd><span class="decoratorStyle"> &gt </span>npm install @ngrx/effects --save</kbd> 
                     
                 
                         </pre>
-                    </div>   
-                    
-                    <li>Initialize @ngrx/store-DevTools module</li>
-                </ul>
-                <div class="devToolsCodeBlock1">
-                    <pre
-                      id="codeInputBlock"
-                      class="terminalCode codeInputBlock"
-                    >                                               
-                                                <code id="coderBlock">
-                                                   
-                                                       <p><span class="importStyle">export</span> interface <span class="folderStyle">State</span> {</p>
-                                                         <br>
-                                                         <p>}</p>
-    
-                                                </code>
-                                            </pre>
-                    <div class="codefileInfo">
-                      <span class="folderStyle">app</span> >
-                      <span class="folderStyle">state</span> >
-                      <span class="filename">app.state.ts</span>
-                    </div>
-                  
-                </div>
-                <p>You can now take advantage of some of the advantages inherit to NgRx through the your Web Developer Tools like:</p>
-               
-                <ul class="chapterContent-ul">
-                    <li class="chapterContent-li">You can now get a visualization of your state tree</li>
-                    <li class="chapterContent-li">Have a history of your state changes</li>
-                    <li class="chapterContent-li">Debug by undoing and redoing state changes</li>
-                    <li class="chapterContent-li">Advanced logging</li>
-                </ul>
-                
-            </div>
-          </div>
-        </section>
-        
-      </main>
-      <footer class="footer"></footer>
-    </div>
+              </div>
 
-    <script></script>
-  </body>
+              <li>Initialize @ngrx/store-DevTools module</li>
+            </ul>
+            <div class="devToolsCodeBlock1">
+              
+                <pre id="codeInputBlock" class="codeInputBlock">
+                                              <code id="coderBlock">
+                                                 
+                                                <p>...</p>    
+                                                <p> <span class="importStyle">import</span> { <span class="moduleStyle">StoreDevToolsModule</span> } from <span class="fileStyle">'@ngrx/store-devtools'</span>;  </p>
+                                                 
+                                                         
+                                                <br>
+                  
+                                                <p><span class="decoratorStyle">@NgModule</span>({</p>
+                                                    <p>imports: [</p>
+                                                        <div class="codeIndent">
+                                                            <p>...</p> 
+                                                            <p><span class="moduleStyle codeIndent">StoreDevToolsModule</span>.<span class="decoratorStyle">intrument</span>({</p>
+                                                              <p><span class="codeIndent"></span><span class="moduleStyle codeIndent">name</span>: <span class="fileStyle">'App Demo DevTools'</span>,</p> 
+                                                              <p><span class="codeIndent"></span><span class="codeIndent"></span><span class="moduleStyle">maxAge</span>: <span class="decoratorStyle">25</span>,</p>
+                                                              <p><span class="codeIndent"></span><span class="codeIndent"></span><span class="moduleStyle">logOnly</span>: <span class="moduleStyle">environment</span><span class="span moduleStyle">production</span></p>
+                                                              <p><span class="codeIndent">}),</span></p>
+                                                              <p class="codeIndent">]</p>
+                                                              <p>})</p>
+                                                        </div>  
+                                                           
+                                                    ]
+                                                <p>});</p>
+                                               
+  
+                                              </code>
+                                          </pre>
+                <div class="codefileInfo">
+                  <span class="folderStyle">app</span> >
+                  <span class="filename">app.module.ts</span>
+                </div>
+            
+
+            </div>
+            <p>You can now take advantage of some of the advantages inherit to NgRx through the your Web Developer Tools
+              like:</p>
+
+            <ul class="chapterContent-ul">
+              <li class="chapterContent-li">You can now get a visualization of your state tree</li>
+              <li class="chapterContent-li">Have a history of your state changes</li>
+              <li class="chapterContent-li">Debug by undoing and redoing state changes</li>
+              <li class="chapterContent-li">Advanced logging</li>
+            </ul>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <footer class="footer"></footer>
+  </div>
+
+  <script></script>
+</body>
+
 </html>

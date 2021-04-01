@@ -1,0 +1,61 @@
+.actionsCodeBlock1 {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    
+    padding: 0px;
+    width: auto;
+}
+.actionsCodeBlock1 .codeBlock {
+    padding-top: 0;
+    margin-top: 0px;
+    align-self: flex-start;
+    width: 100%;
+}
+
+.actionsImg1 {
+    width: 70%;
+    margin: auto;
+    align-items: center;
+}
+
+.actionsCodeBlock2 {
+    display: flex;
+    flex-direction: column;
+   
+    margin: auto;
+    width: auto;
+    align-items: center;
+}
+
+.actionsCodeBlock2 .coderBlock {
+    padding-top: 0;
+    
+    margin-top: 0px;
+    align-self: flex-start;
+    width: 100%;
+}
+.actionsCodeBlock2 code#coderBlock {
+    padding: 2vw 4vw;
+}
+
+
+.actionsCodeBlock3 {
+    display: flex;
+    flex-direction: column;
+   
+    margin: auto;
+    width: auto;
+    align-items: center;
+}
+
+.actionsCodeBlock3 .coderBlock {
+    padding-top: 0;
+    
+    margin-top: 0px;
+    align-self: flex-start;
+    width: 100%;
+}
+.actionsCodeBlock3 code#coderBlock {
+    padding: 2vw 4vw;
+}
