@@ -1,0 +1,39 @@
+.sideMenuContainer{
+    grid-area: sideMenuContainer;
+    margin: 0px;
+
+}
+.sideMenuContainer .nav-list {
+    text-decoration: none;
+    margin-top: 0px;
+    
+    
+
+}
+#nav-bar .nav-list {
+    list-style-type: none;
+    padding: 0px;
+}
+#nav-bar .nav-list .nav-li {
+    padding: 20px;
+    border-top: var(--secondayColor) 2px solid;
+    border-left:var(--secondayColor) 2px solid;
+    border-right: var(--secondayColor) 2px solid;
+    border-bottom: none;
+    
+
+}
+#nav-bar .nav-list .nav-li:first-child {
+    border-bottom: none;
+}
+#nav-bar .nav-list .nav-li:last-child {
+    border-bottom: var(--secondayColor) 2px solid;;
+}
+#nav-bar .nav-li a {
+    text-decoration: none;
+    color:var(--secondayColor);
+}
+#nav-bar .nav-li a:hover {
+    
+    color:var(--primaryColor);
+}

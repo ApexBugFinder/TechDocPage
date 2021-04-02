@@ -12,7 +12,8 @@
 @import './utilizingFeatureSelectors-styles.css';
 @import './effects-styles.css';
 @import './devtools-styles.css';
-
+@import './codeBlock-styles.css';
+@import './navBar-styles.css';
 
 
 :root{
@@ -72,45 +73,7 @@ p{
     font-weight: 400;
     font-size: 18px;
 }
-.sideMenuContainer{
-    grid-area: sideMenuContainer;
-    margin: 0px;
 
-}
-.sideMenuContainer .nav-list {
-    text-decoration: none;
-    margin-top: 0px;
-    
-    
-
-}
-#nav-bar .nav-list {
-    list-style-type: none;
-    padding: 0px;
-}
-#nav-bar .nav-list .nav-li {
-    padding: 20px;
-    border-top: var(--secondayColor) 2px solid;
-    border-left:var(--secondayColor) 2px solid;
-    border-right: var(--secondayColor) 2px solid;
-    border-bottom: none;
-    
-
-}
-#nav-bar .nav-list .nav-li:first-child {
-    border-bottom: none;
-}
-#nav-bar .nav-list .nav-li:last-child {
-    border-bottom: var(--secondayColor) 2px solid;;
-}
-#nav-bar .nav-li a {
-    text-decoration: none;
-    color:var(--secondayColor);
-}
-#nav-bar .nav-li a:hover {
-    
-    color:var(--primaryColor);
-}
 ul {
     text-decoration: none; 
     
@@ -273,43 +236,4 @@ li a, p a {
  .chapterContent-ul-numbered {
     list-style: decimal;
     
-}
-.terminalCode{
-    width: 80vm;
-    
-}
-.terminalCode pre{
-    margin: 40px auto;
-}
-.interfaceStyle {
-    color: #00008B;
-}
-.importStyle {
-    color: var(--primaryColor);
-}
-.moduleStyle {
-    color: lightskyblue;
-}
-.booleanStyle {
-    color: #0B6374;
-}
-
-.folderStyle {
-    color: #7AC943;
-}
-.fileStyle {
-    color: #CE9178;
-}
-.decoratorStyle {
-    color: yellow;
-}
-.errorStyle {
-    color: #FD5B58;
-}
-.codeIndent {
-    margin-left: 40px;
-}
-#coderBlock {
-    padding-left: 40px;
-    padding-right: 40px;
 }

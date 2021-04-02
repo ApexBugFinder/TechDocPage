@@ -1,4 +1,7 @@
 .creatingSelectorsCodeBlock1 {
-    align-self: center;
+    margin: auto;
     width: auto;
+}
+.creatingSelectorsCodeBlock1 .coderBlock {
+    padding: 1vw 4vw;
 }

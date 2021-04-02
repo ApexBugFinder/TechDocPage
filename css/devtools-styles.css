@@ -1,39 +1,12 @@
 .devToolsCodeBlock1 {
-    display: flex;
-    flex-direction: column;
-   
     margin: auto;
-    width: auto;
-    align-items: center;
+    
+   
 }
 
-.devToolsCodeBlock1 .coderBlock {
-    padding-top: 0;
-    
-    margin-top: 0px;
-    align-self: flex-start;
-    width: 100%;
-}
+
 .devToolsCodeBlock1 code#coderBlock {
     padding: 1vw 4vw;
 }
 
-.devToolsCodeBlock2 {
-    display: flex;
-    flex-direction: column;
-   
-    margin: auto;
-    width: auto;
-    align-items: center;
-}
 
-.devToolsCodeBlock2 .coderBlock {
-    padding-top: 0;
-    
-    margin-top: 0px;
-    align-self: flex-start;
-    width: 100%;
-}
-.devToolsCodeBlock2 code#coderBlock {
-    padding: 2vw 4vw;
-}

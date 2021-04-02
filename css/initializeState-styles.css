@@ -25,3 +25,16 @@ margin: 40px auto 0 auto;
     
     max-height: 520px;
 }
+
+.initCodeBlock1 {
+ 
+   
+    margin: auto;
+    width: auto;
+   
+}
+
+.initCodeBlock1 .coderBlock {
+ 
+    padding: 1vw 4vw;
+}

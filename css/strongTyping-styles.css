@@ -16,9 +16,9 @@
     width: 90%;
 }
 .stronglyTypedGrid1CodeBlock1 {
-   
+   margin:auto;
+   width: auto;
 }
-
-.stronglyTypedGrid1CodeBlock1 .codeInputBlock {
-    width: 400px;
+.stronglyTypedGrid1CodeBlock1 .coderBlock {
+    padding: 1vw 4vw;
 }

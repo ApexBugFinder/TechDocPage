@@ -333,15 +333,15 @@
                   <span class="filename">app.module.ts</span> file :
                 </p>
 
-                <div class="codeBlock gettingStartedCodeBlock1">
-                  <pre id="codeInputBlock" class="codeInputBlock">
+                <div class="codeBlock  gettingStartedCodeBlock1">
+                  <pre id="" class="codeInputBlock">
 
 
-                                                    <code id="coderBlock">
+                                                    <code class="coderBlock">
                                                         
                                                        
                                                            <p> <span class="importStyle">import</span> { <span class="moduleStyle">StoreModule</span> } from <span class="fileStyle">'@ngrx/store'</span>;  </p>
-                                                        
+                                                           <br>  
                                                             
                     
                                                             <p><span class="decoratorStyle">@NgModule</span>({</p>
@@ -472,16 +472,16 @@
                   alt="Figure of App State Tree" />
               </div>
               <div class="rightSideBlock">
-                <div class="initCode">
-                  <div class="codeBlock">
+                
+                  <div class="codeBlock initCodeBlock1">
                     <pre id="codeInputBlock" class="codeInputBlock">
 
 
-                                                   <code id="coderBlock">
+                                                   <code class="coderBlock">
                                                        
                                                       
                                                           <p><span class="importStyle">export</span> interface <span class="folderStyle">State</span> {</p>
-                                                            <br>
+                                                            <br><br>
                                                             <p>}</p>
 
                                                           
@@ -498,7 +498,7 @@
                       <span class="filename">app.state.ts</span>
                     </div>
                   </div>
-                </div>
+                
                 <div class="initText">
                   <p>
                     When the StoreModule initializes the store it will
@@ -558,7 +558,7 @@
                   <div class="codeBlock">
                     <pre class="codeInputBlock">
 
-                                          <code id="coderBlock">                                                   
+                                          <code class="coderBlock">                                                   
                                             <p>{</p>
                                               <p class="propertyStyle">isAuthenticated: <span class="booleanStyle">true</span>,</p>
                                               <p class="propertyStyle">userId: <span class="fileStyle">`kdkdjggjj`</span>,</p>
@@ -579,7 +579,7 @@
                   <p class="featureSliceTitle"><span class="empFeature">Feature</span>: Product</p>
                   <div class="codeBlock">
                     <pre id="codeInputBlock" class="codeInputBlock">
-                                                   <code id="coderBlock">
+                                                   <code class="coderBlock">
                                                       
                                                     <ul class="featureSlice">
                                                       <li>{</li>
@@ -631,12 +631,13 @@
               <div class="featureStateGrid2CodeBlock">
                 <div class="featureStateGrid2CodeBlock1">
                   <pre id="codeInputBlock" class="codeInputBlock">
-                                                <code id="coderBlock">
+                                                <code class="coderBlock">
                                                    
                                                       
                                                   <p> <span class="importStyle">import</span> { <span class="moduleStyle">StoreModule</span> } from <span class="fileStyle">'@ngrx/store'</span>;  </p>
                                                   <p> <span class="importStyle">import</span> { <span class="moduleStyle">reducer</span> } from <span class="fileStyle">'./state/user.reducer'</span>;  </p>      
-                                                            
+                                                    <br>
+                                                    
                     
                                                   <p><span class="decoratorStyle">@NgModule</span>({</p>
                                                       <p>imports: [</p>
@@ -660,9 +661,9 @@
                   </div>
                 </div>
 
-                <div class="featureStateGrid2CodeBlock2">
+                <div class="codeBlock featureStateGrid2CodeBlock2">
                   <pre id="codeInputBlock" class="codeInputBlock">
-                                                <code id="coderBlock">
+                                                <code class="coderBlock">
                                                    
                                                       
                                                  
@@ -671,7 +672,7 @@
                                                   <p> <span class="importStyle">import</span> { <span class="moduleStyle">StoreModule</span> } from <span class="fileStyle">'@ngrx/store'</span>;  </p>
                                                   <p> <span class="importStyle">import</span> { <span class="moduleStyle">reducer</span> } from <span class="fileStyle">'./state/product.reducer'</span>;  </p>      
                                                             
-                    
+                                                  <br>
                                                   <p><span class="decoratorStyle">@NgModule</span>({</p>
                                                       <p>imports: [</p>
                                                           <div class="codeIndent">
@@ -720,9 +721,9 @@
             <div class="stronglyTypedGrid1">
               <div class="stronglyTypedGrid1Pic"><img src="./images/SVG/stronglyTypedSVG.svg" alt="" class=""
                   id="strongtypedPic1"></div>
-              <div class="stronglyTypedGrid1CodeBlock1">
+              <div class="codeBlock generalCodeBlock">
                 <pre id="codeInputBlock" class="codeInputBlock">
-                                              <code id="coderBlock">
+                                              <code class="coderBlock">
                                                  
                                                      <p><span class="importStyle">export </span> <span class="interfaceStyle">interface</span>
                                                       <span class="folderStyle">State</span> 
@@ -734,7 +735,7 @@
                                                        
                                                        <p>}</p>
                                                        <br>
-                                                       <p><span class="importStyle"></span> <span class="interfaceStyle">interface</span><span class="folderStyle">ProductState</span> = {</p>
+                                                       <p><span class="importStyle"></span> <span class="interfaceStyle">interface </span><span class="folderStyle">ProductState</span> = {</p>
                                                        <p><span class="moduleStyle codeIndent">showProductCode</span>: <span class="booleanStyle">boolean</span></p>
                                                        <p><span class="moduleStyle codeIndent">currentProduct</span>: <span class="folderStyle">Product</span>;</p>
                                                        <p><span class="moduleStyle codeIndent">products</span>: <span class="folderStyle">Product[]</span>;</p>
@@ -778,9 +779,9 @@
               all the selectors are
               attached, almost as if you are creating a domain in which the selectors can be found.</p>
 
-            <div class="creatingSelectorsCodeBlock1">
+            <div class="codeBlock generalCodeBlock">
               <pre id="codeInputBlock" class="codeInputBlock">
-                                                    <code id="coderBlock">
+                                                    <code class="coderBlock">
                                                        
                                                         <p><span class="interfaceStyle">const </span><span class="moduleStyle">getProductFeatureState =</span></p>
                                                         <p><span class="decoratorStyle codeIndent">createFeatureSelector</span><<span class="folderStyle">ProductState</span>>(<span class="fileStyle">`users`</span>);</p>
@@ -857,7 +858,7 @@
               <div class="codeBlock">
                 <pre class="codeInputBlock">
 
-                                                <code id="coderBlock">                                                   
+                                                <code class="coderBlock">                                                   
                                                   <p>{</p>
                                                     <div class="codeIndent">
                                                       <p class="propertyStyle">type: <span class="fileStyle">'LOGIN'</span>,</p>
@@ -884,9 +885,9 @@
               action dictionary). Declaration type via enum
               immediately transforms this fragile process into a strongly typed dependable process. </p>
 
-            <div class="actionsCodeBlock1">
+            <div class="codeBlock generalCodeBlock">
               <pre id="codeInputBlock" class="codeInputBlock">
-                                <code id="coderBlock">
+                                <code class="coderBlock">
                                    <p><span class="importStyle">export </span><span class="interfaceStyle">enum </span><span class="folderStyle">ProductActionTypes</span> {</p> 
                                     <p><span class="moduleStyle codeIndent">ToggleProduceCode</span> = <span class="fileStyle">`[Product] Toggle Product Code`</span>,</p>
                                     <p><span class="moduleStyle codeIndent">SetCurrentProduct </span> = <span class="fileStyle">`[Product] Set Current Product`</span>,</p>   
@@ -916,9 +917,9 @@
             <img src="./images/productActions.png" alt="" class="actionsImg1">
 
 
-            <div class="actionsCodeBlock2">
+            <div class="codeBlock generalCodeBlock">
               <pre id="codeInputBlock" class="codeInputBlock">
-                                                                <code id="coderBlock">
+                                                                <code class="coderBlock">
                                                                    
                                                                        <p><span class="importStyle">export </span>
                                                                           <span class="interfaceStyle">class </span>
@@ -981,9 +982,9 @@
 
             <p>Once our Type definitions and actions have been defined we then can export them as a union type.</p>
 
-            <div class="actionsCodeBlock3">
+            <div class="codeBlock generalCodeBlock">
               <pre id="codeInputBlock" class="codeInputBlock">
-                                                                <code id="coderBlock">
+                                                                <code class="coderBlock">
                                                                    
                                                                        <p><span class="importStyle">export </span><span class="interfaceStyle">type </span><span class="folderStyle">ProductActions </span> = </p>
                                                                        <p><span class="moduleStyle codeIndent">ToggleProductCode </span>= </p>
@@ -1014,9 +1015,9 @@
             <p>Now that we have actions defined we can now dispatch them in the components with ease and with very
               little amount of code needed.</p>
 
-            <div class="dispatchingActionsCodeBlock1">
+            <div class="codeBlock generalCodeBlock">
               <pre id="codeInputBlock" class="codeInputBlock">
-                                                <code id="coderBlock">
+                                                <code class="coderBlock">
                                                    
                                                   <p><span class="decoratorStyle">checkChanged</span>(<span class="moduleStyle">value</span>: <span class="folderStyle">boolean</span>): <span class="folderStyle">void </span> {</p>
                                                     <p><span class="interfaceStyle">this</span>.<span class="moduleStyle">store</span>.<span class="decoratorStyle">dispatch</span>(</p>
@@ -1066,9 +1067,9 @@
 
             <p>Example of a reducer.ts file:</p>
 
-            <div class="reducersCodeBlock1">
+            <div class="codeBlock reducersCodeBlock1 ">
               <pre id="codeInputBlock" class="codeInputBlock">
-                                            <code id="coderBlock">
+                                            <code class="coderBlock">
                                                
                                               <p><span class="importStyle">export </span><span class="interfaceStyle">function </span><span class="decoratorStyle">reducer </span> (</p>
                                               <p><span class="moduleStyle codeIndent">state</span>: <span class="folderStyle">ProductState </span>= <span class="moduleStyle">initialState</span>,</p>     
@@ -1141,10 +1142,10 @@
               concerning the portion of the slice you are interested in. By importing the exports in the feature module
               reducer.ts file you will gain access to the
               selectors.</p>
-
-            <div class="utilizingFeatureSelectorsCodeBlock1">
+            <div class="codeBlock generalCodeBlock">
+            <!-- <div class="utilizingFeatureSelectorsCodeBlock1"> -->
               <pre id="codeInputBlock" class="codeInputBlock">
-                                                        <code id="coderBlock">
+                                                        <code class="coderBlock">
                                                            <p><span class="importStyle">import </span>{<span class="moduleStyle">Store, select </span>} <span class="importStyle">from </span><span class="fileStyle">`@ngrx/store`</span>;</p>
                                                            <p><span class="importStyle">import </span><span class="moduleStyle">* as fromProduct </span><span class="importStyle">from </span><span class="fileStyle">`.../state/product.reducer`</span>;</p>
             
@@ -1167,10 +1168,10 @@
                 <<span class="moduleStyle">TYPE</span>> and a
                   correpsonding variable of that type to access the data
                   (SelectorData: TYPE) that is piped in from the subscription.</p>
-
-            <div class="utilizingFeatureSelectorsCodeBlock2">
+            <div class="codeBlock generalCodeBlock">
+            <!-- <div class="utilizingFeatureSelectorsCodeBlock2"> -->
               <pre id="codeInputBlock" class="codeInputBlock">
-                                                            <code id="coderBlock">
+                                                            <code class="coderBlock">
                                                                 <p><span class="decoratorStyle">@Component</span> ( {</p>
                                                                 <p><span class="moduleStyle">selector</span>: <span class="fileStyle">`pm-product-list`</span>,</p>
                                                                 <p><span class="moduleStyle">templateUrl</span>: <span class="fileStyle">`./product-list.component.html`</span>,</p>
@@ -1203,10 +1204,10 @@
               local variable. These values in the store can then be exposed directly via an async pipe in the view or
               can be subscribed to component side
               so the data can be manipulated before it is exposed to the user.</p>
-
-            <div class="utilizingFeatureSelectorsCodeBlock3">
+            <div class="codeBlock generalCodeBlock">
+            <!-- <div class="utilizingFeatureSelectorsCodeBlock3"> -->
               <pre id="codeInputBlock" class="codeInputBlock">
-                                                                <code id="coderBlock">
+                                                                <code class="coderBlock">
                                                                    
                                                                        <p><span class="decoratorStyle">ngOnInit</span>(): <span class="folderStyle">void </span>{</p>
                                                                         <p><span class="interfaceStyle codeIndent">this</span>.<span class="moduleStyle">products$ </span>=
@@ -1236,9 +1237,10 @@
               </div>
 
             </div>
-            <div class="utilizingFeatureSelectorsCodeBlock4">
+            <div class="codeBlock generalCodeBlock">
+            <!-- <div class="utilizingFeatureSelectorsCodeBlock4"> -->
               <pre id="codeInputBlock" class="codeInputBlock">
-                                                                <code id="coderBlock">
+                                                                <code class="coderBlock">
                                                                    
                                                                       <p>&lt<span class="booleanStyle">div </span><span class="moduleStyle">class</span>=<span class="fileStyle">"card-body" </span><span class="moduleStyle">*ngIf</span>=<span class="fileStyle">"products$ | async as products"</span>></p>
                                                                       <p><span class="codeIndent"></span>&lt<span class="booleanStyle">div </span><span class="moduleStyle">class</span>=<span class="fileStyle">"list-group"</span>></p>
@@ -1307,10 +1309,10 @@
 
             <p>To complete the initialization of the NgRx Effects module you need to import it into the appModule</p>
 
-            <div class="effectsCodeBlock1">
+            <div class="codeBlock generalCodeBlock">
               
               <pre id="codeInputBlock" class="codeInputBlock">
-                                            <code id="coderBlock">
+                                            <code class="coderBlock">
                                                
                                               <p>...</p>   
                                               <p> <span class="importStyle">import</span> { <span class="moduleStyle">EffectsModule</span> } from <span class="fileStyle">'@ngrx/effects'</span>;  </p>
@@ -1357,10 +1359,10 @@
               LoadFail() Action will carry a string
               detailing the error.</p>
 
-              <div class="devToolsCodeBlock2">
+              <div class="codeBlock generalCodeBlock">
               
                 <pre id="codeInputBlock" class="codeInputBlock">
-                                              <code id="coderBlock">
+                                              <code class="coderBlock">
                                                  
                                                     
                                                 <p> <span class="importStyle">import</span> { <span class="moduleStyle">Injectable</span> } from <span class="fileStyle">'@angular/core'</span>;  </p>
@@ -1408,7 +1410,7 @@
             </div>
 
             <p>Regardless of whether the Effect is successful The Reducer is waiting patiently to process the resultant
-              actions of the effect.</p>
+              actions of t<div class="codeBlock generalCode"></div>he effect.</p>
 
 
           </div>
@@ -1446,10 +1448,10 @@
 
               <li>Initialize @ngrx/store-DevTools module</li>
             </ul>
-            <div class="devToolsCodeBlock1">
+            <div class="codeBlock generalCodeBlock">
               
                 <pre id="codeInputBlock" class="codeInputBlock">
-                                              <code id="coderBlock">
+                                              <code class="coderBlock">
                                                  
                                                 <p>...</p>    
                                                 <p> <span class="importStyle">import</span> { <span class="moduleStyle">StoreDevToolsModule</span> } from <span class="fileStyle">'@ngrx/store-devtools'</span>;  </p>
