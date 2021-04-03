@@ -37,3 +37,37 @@
     
     color:var(--primaryColor);
 }
+
+@media (max-width: 1154px) {
+
+    body {
+        font-family: omnes-cyrillic, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 24px;
+        background-color:magenta;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "contentContainer"
+        ;
+        
+    }
+    .sideMenuContainer {
+        visibility: collapse;
+        width: 0;
+    }
+    .topMenuContainer {
+        height: 40px;
+        width: 100%;
+        background-color: var(--accent1Color);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        
+    }
+
+  
+
+     
+}
