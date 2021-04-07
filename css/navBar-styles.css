@@ -37,6 +37,49 @@
     
     color:var(--primaryColor);
 }
+#top-nav-bar .top-nav-list {
+    list-style-type: none;
+    padding: 0px;
+}
+#top-nav-bar .top-nav-list .nav-li {
+    padding: 20px;
+    border-top: var(--secondayColor) 2px solid;
+    border-left:var(--secondayColor) 2px solid;
+    border-right: var(--secondayColor) 2px solid;
+    border-bottom: none;
+    height: 36px;
+    
+
+}
+#top-nav-bar .top-nav-list .nav-li {
+    height: 38px;
+    font-size: 20px;
+    margin: 0px auto;
+    padding: 0px 10px;
+}
+#top-nav-bar .top-nav-list .nav-li:first-child {
+    border-bottom: none;
+}
+#top-nav-bar .top-nav-list .nav-li:last-child {
+    border-bottom: var(--secondayColor) 2px solid;;
+}
+#top-nav-bar .nav-li a {
+    text-decoration: none;
+    color:var(--secondayColor);
+    height: 38px;
+    width: 100%;
+    padding: auto 10px;
+    
+}
+#top-nav-bar .nav-li a:hover {
+    
+    color:var(--primaryColor);
+}
+.top-menu-button-icon {
+    width: 40px;
+    margin: auto;
+    filter: drop-shadow(0 0 0.75rem white);
+}
 
 @media (max-width: 1154px) {
 
@@ -62,11 +105,59 @@
         background-color: var(--accent1Color);
         position: absolute;
         top: 0;
-        left: 0;
-        z-index: 10;
+        z-index: 15;
+        
         
     }
+    .hideTopMenuContainer {
+        visibility: collapse;
+    }
+    .topMenuContentContainer {
+        display:flex;
+        width: 85vw;
+        height: 100%;
+        z-index: 15;
+        flex-direction: row;
+        
+        justify-content: flex-end;
 
+       margin: auto;
+    }
+   .topMenuContentContainer .topMenuButton{
+       width: 40px;
+       height: 100%;
+       display: inline-block;
+       background-color: var(--accent1Color);
+       justify-content: flex-end;
+     z-index: 15;
+   }
+    .topMenu {
+       background-color: yellow;
+       width:300px;
+       height: 100%;
+       display: inline-block;
+       z-index: 15;
+      
+   }
+   .top-nav-bar {
+       height: 600px;
+       overflow:hidden;
+       background-color: white;
+   }
+
+    .top-nav-bar::-webkit-scrollbar {
+    width: 12px;
+}
+
+    .top-nav-bar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+
+.top-nav-bar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
   
 
      

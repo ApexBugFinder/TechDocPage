@@ -68,17 +68,77 @@
     <header class="header">
 
       <div class="headertitle">
-        <span class="maintitle">NG</span>
+        <div class="maintitle">NG</div>
         <div class="siteLogoContainer">
           <img src="./images/SVG/ngrx_logo.svg" alt="logo" class="siteLogo" />
+          
+          
+      
         </div>
-        <span class="maintitle2">RX</span>
+       <div class="maintitle2">RX</div>
+      
       </div>
-
-      <div class="subTitle">The Basics</div>
+      <h2 class="subTitle">The Basics</h2>
     </header>
     <div class="topMenuContainer" id="topMenuContainer">
-      
+          <div class="topMenuContentContainer">
+            
+                  <div class="topMenu">
+                    <div id="top-nav-bar" class="top-nav-bar hide-nav-bar">
+                      <ul class="top-nav-list">
+                        <li class="nav-li">NGRX: The Basics</li>
+                        <li class="nav-li">
+                          <a href="#introduction" class="nav-item" onclick="return toggleTopMenu()">Introduction</a>
+                        </li>
+                        <li class="nav-li">
+                          <a href="#reduxPattern" class="nav-item" onclick="return toggleTopMenu()">Redux Pattern</a>
+                        </li>
+                        <li class="nav-li">
+                          <a href="#gettingStarted" class="nav-item" onclick="return toggleTopMenu()">Getting Started</a>
+                        </li>
+                        <li class="nav-li">
+                          <a href="#state" class="nav-item" onclick="return toggleTopMenu()">State</a>
+                        </li>
+                        <li class="nav-li">
+                          <a href="#initializeState" class="nav-item" onclick="return toggleTopMenu()">Initialize State</a>
+                        </li>
+                        <li class="nav-li">
+                          <a href="#featureStateManagement" class="nav-item" onclick="return toggleTopMenu()">Feature State Management</a>
+                        </li>
+                        <li class="nav-li">
+                          <a href="#strongTyping" class="nav-item" onclick="return toggleTopMenu()">Strong Typing </a>
+                        </li>
+                        <li class="nav-li">
+                          <a href="#creatingFeatureSelectors" class="nav-item" onclick="return toggleTopMenu()">Creating Feature Selectors</a>
+                        </li>
+                        <li class="nav-li">
+                          <a href="#actions" class="nav-item" onclick="return toggleTopMenu()">Actions</a>
+                        </li>
+                        <li class="nav-li">
+                          <a href="#dispatchingActions" class="nav-item" onclick="return toggleTopMenu()">Dispatching Actions</a>
+                        </li>
+                        <li class="nav-li">
+                          <a href="#reducers" class="nav-item" onclick="return toggleTopMenu()">Reducer</a>
+                        </li>
+                        <li class="nav-li">
+                          <a href="#utilizingFeatureSelectors" class="nav-item" onclick="return toggleTopMenu()">Utilizing Feature Selectors</a>
+                        </li>
+                        <li class="nav-li">
+                          <a href="#effects" class="nav-item" onclick="return toggleTopMenu()">Effects</a>
+                        </li>
+                        <li class="nav-li">
+                          <a href="#devtools" class="nav-item" onclick="return toggleTopMenu()">Dev Tools</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>  
+                  <div class="topMenuButton">
+                    <a href="#" onclick="return toggleTopMenu()">
+                   <img src="./images/SVG/ngrx_logo.svg" alt="top menu button" class="top-menu-button-icon"></a>
+                  </div>
+            
+          </div>
+     
     </div>
     <main class="main" id="main-doc">
       <section id="introduction" class="infoChapter">
@@ -1412,7 +1472,7 @@
             </div>
 
             <p>Regardless of whether the Effect is successful The Reducer is waiting patiently to process the resultant
-              actions of t<div class="codeBlock generalCode"></div>he effect.</p>
+              actions dispatched from the effect.</p>
 
 
           </div>
